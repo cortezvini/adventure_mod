@@ -1,0 +1,30 @@
+{
+  "item.adventuremod.magic_fruit": "Fruit Magic",
+  "item.adventuremod.witheringpowder": "Wither Powder",
+  "item.adventuremod.levitationpowder": "Levitation Powder",
+  "item.adventuremod.oredetector.no_valuables": "Ore not found.",
+  "item.adventuremod.oredetector": "Ore Detector",
+  "item.adventuremod.oredetectorgeneric": "Ore Detector Generic",
+  "item.adventuremod.latex_extractor": "Latex Extractor",
+  "item.adventuremod.latex": "Latex",
+  "item.adventuremod.rubber": "Rubber",
+  "item.adventuremod.divingsuit_helmet": "Diving Mask",
+  "item.adventuremod.divingsuit_chestplate": "Diving Suit",
+  "item.adventuremod.divingsuit_leggings": "Diving Pants",
+  "item.adventuremod.divingsuit_boots": "Diving Boots",
+
+  "item.minecraft.potion.effect.adventuremod_wither": "Decay of Potion",
+  "item.minecraft.splash_potion.effect.adventuremod_wither": "Splash Potion of Decay",
+  "item.minecraft.lingering_potion.effect.adventuremod_wither": "Extended Potion of Decay",
+  "item.minecraft.tipped_arrow.effect.adventuremod_wither": "Decay Arrow",
+
+  "item.minecraft.potion.effect.adventuremod_levitation": "Levitation of Potion",
+  "item.minecraft.splash_potion.effect.adventuremod_levitation": "Splash Potion of Levitation",
+  "item.minecraft.lingering_potion.effect.adventuremod_levitation": "Extended Potion of Levitation",
+  "item.minecraft.tipped_arrow.effect.adventuremod_levitation": "Levitation Arrow",
+
+  "block.adventuremod.rubber_tree_leaves": "Rubber Leaves",
+  "block.adventuremod.rubber_tree_log": "Rubber Tree Log",
+  "block.adventuremod.rubber_tree_wood": "Rubber Wood",
+  "block.adventuremod.rubber_tree_sapling": "Rubber Tree Sapling"
+}

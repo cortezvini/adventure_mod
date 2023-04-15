@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "adventuremod:block/rubber_tree_log_latex_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "adventuremod:block/rubber_tree_log_latex"
+    },
+    "axis=z": {
+      "model": "adventuremod:block/rubber_tree_log_latex_horizontal",
+      "x": 90
+    }
+  }
+}

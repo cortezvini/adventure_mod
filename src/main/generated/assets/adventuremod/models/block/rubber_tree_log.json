@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "adventuremod:block/rubber_tree_log_top",
+    "side": "adventuremod:block/rubber_tree_log"
+  }
+}

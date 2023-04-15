@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.0,
+  "group": "adventuremod",
+  "ingredient": {
+    "item": "adventuremod:rubber_tree_log"
+  },
+  "result": "minecraft:oak_log"
+}

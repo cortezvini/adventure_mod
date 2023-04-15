@@ -1,0 +1,30 @@
+{
+  "item.adventuremod.magic_fruit": "Fruta Mágica",
+  "item.adventuremod.witheringpowder": "Pó de Wither",
+  "item.adventuremod.levitationpowder": "Pó de Levitação",
+  "item.adventuremod.oredetector.no_valuables": "Minério não encontrado.",
+  "item.adventuremod.oredetector": "Detector de Minério",
+  "item.adventuremod.oredetectorgeneric": "Detector de Minério Genérico",
+  "item.adventuremod.latex_extractor": "Extrator de látex",
+  "item.adventuremod.latex": "Resina Pegajosa",
+  "item.adventuremod.rubber": "Borracha",
+  "item.adventuremod.divingsuit_helmet": "Mascara de Mergulho",
+  "item.adventuremod.divingsuit_chestplate": "Roupa de Mergulho",
+  "item.adventuremod.divingsuit_leggings": "Calça de Mergulho",
+  "item.adventuremod.divingsuit_boots": "Botas de Mergulho",
+
+  "item.minecraft.potion.effect.adventuremod_wither": "Poção de Decaimento",
+  "item.minecraft.splash_potion.effect.adventuremod_wither": "Poção Arremessável de Decaimento",
+  "item.minecraft.lingering_potion.effect.adventuremod_wither": "Poção Prolongada de Decaimento",
+  "item.minecraft.tipped_arrow.effect.adventuremod_wither": "Flecha de Decaimento",
+
+  "item.minecraft.potion.effect.adventuremod_levitation": "Poção de Levitação",
+  "item.minecraft.splash_potion.effect.adventuremod_levitation": "Poção Arremessável de Levitação",
+  "item.minecraft.lingering_potion.effect.adventuremod_levitation": "Poção Prolongada de Levitação",
+  "item.minecraft.tipped_arrow.effect.adventuremod_levitation": "Flecha de Levitação",
+
+  "block.adventuremod.rubber_tree_leaves": "Folhas de Seringueira",
+  "block.adventuremod.rubber_tree_log": "Tronco de Siringueira",
+  "block.adventuremod.rubber_tree_wood": "Madeira de Siringueira",
+  "block.adventuremod.rubber_tree_sapling": "Muda de Siringueira"
+}

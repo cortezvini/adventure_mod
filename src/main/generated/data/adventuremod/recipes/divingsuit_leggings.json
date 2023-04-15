@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "adventuremod:rubber"
+    },
+    "G": {
+      "item": "minecraft:orange_dye"
+    }
+  },
+  "pattern": [
+    "###",
+    "#G#",
+    "# #"
+  ],
+  "result": {
+    "item": "adventuremod:divingsuit_leggings"
+  }
+}

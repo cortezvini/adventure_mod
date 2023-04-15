@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "adventuremod:rubber_tree_log",
+    "adventuremod:rubber_tree_wood",
+    "adventuremod:rubber_tree_log_latex",
+    "adventuremod:rubber_tree_wood_latex"
+  ]
+}

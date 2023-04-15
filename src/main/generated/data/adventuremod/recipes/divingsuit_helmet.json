@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "adventuremod:rubber"
+    },
+    "G": {
+      "item": "minecraft:glass_pane"
+    },
+    "O": {
+      "item": "minecraft:orange_dye"
+    }
+  },
+  "pattern": [
+    "###",
+    "#G#",
+    " O "
+  ],
+  "result": {
+    "item": "adventuremod:divingsuit_helmet"
+  }
+}
