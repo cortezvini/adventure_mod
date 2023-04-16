@@ -29,6 +29,9 @@
   "block.adventuremod.rubber_tree_sapling": "Rubber Tree Sapling",
 
   "adventuremod.command.homeset": "Set home at %d",
-  "adventuremod.command.returnhome.success": "Player returned Home!",
-  "adventuremod.command.returnhome.notdefined": "No Home Position has been Set!"
+  "adventuremod.command.returnhome.success": "You returned to your home!",
+  "adventuremod.command.returnhome.notdefined": "No Home Position has been Set!",
+
+  "adventuremod.command.backpos.success":"You have returned to the place of last death!",
+  "adventuremod.command.backpos.notdefined": "You haven't died yet!"
 }

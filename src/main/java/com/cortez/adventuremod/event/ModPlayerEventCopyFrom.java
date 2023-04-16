@@ -11,5 +11,6 @@ public class ModPlayerEventCopyFrom implements ServerPlayerEvents.CopyFrom {
         IEntityDataSaver player = ((IEntityDataSaver) newPlayer);
 
         player.getPersistentData().putIntArray("homepos", original.getPersistentData().getIntArray("homepos"));
+        player.getPersistentData().putIntArray("backpos", original.getPersistentData().getIntArray("backpos"));
     }
 }

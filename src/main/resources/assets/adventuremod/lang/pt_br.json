@@ -30,5 +30,8 @@
 
   "adventuremod.command.homeset": "Casa definida em %d",
   "adventuremod.command.returnhome.success": "Você retornou para sua casa!",
-  "adventuremod.command.returnhome.notdefined": "Você não tem uma casa definida!"
+  "adventuremod.command.returnhome.notdefined": "Você não tem uma casa definida!",
+
+  "adventuremod.command.backpos.success":"Você retornou para lugar da ultima morte!",
+  "adventuremod.command.backpos.notdefined": "Você não morreu ainda!"
 }
