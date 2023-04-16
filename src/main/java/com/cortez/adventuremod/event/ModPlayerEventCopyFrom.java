@@ -12,5 +12,6 @@ public class ModPlayerEventCopyFrom implements ServerPlayerEvents.CopyFrom {
 
         player.getPersistentData().putIntArray("homepos", original.getPersistentData().getIntArray("homepos"));
         player.getPersistentData().putIntArray("backpos", original.getPersistentData().getIntArray("backpos"));
+        player.getPersistentData().putString("backWorld", original.getPersistentData().getString("backWorld"));
     }
 }

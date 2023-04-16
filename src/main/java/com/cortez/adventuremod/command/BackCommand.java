@@ -5,9 +5,13 @@ import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import net.minecraft.command.CommandRegistryAccess;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
+import net.minecraft.world.World;
 
 public class BackCommand
 {
@@ -23,7 +27,24 @@ public class BackCommand
 
         if(backPos.length != 0) {
             int[] playerPos = player.getPersistentData().getIntArray("backpos");
-            context.getSource().getPlayer().requestTeleport(playerPos[0], playerPos[1], playerPos[2]);
+
+            String dimension = player.getPersistentData().getString("backWorld");
+
+
+            ServerPlayerEntity playerServer = (ServerPlayerEntity) player;
+
+            if (dimension == "OVERWORLD")
+            {
+                context.getSource().getPlayer().requestTeleport(playerPos[0], playerPos[1], playerPos[2]);
+            } else if (dimension == "NETHER") {
+
+                ServerWorld nether = playerServer.getServer().getWorld(World.NETHER);
+                playerServer.teleport(nether, playerPos[0], playerPos[1], playerPos[2], playerServer.getYaw(), playerServer.getPitch());
+            } else if (dimension == "END") {
+                ServerWorld end = playerServer.getServer().getWorld(World.END);
+                playerServer.teleport(end, playerPos[0], playerPos[1], playerPos[2], playerServer.getYaw(), playerServer.getPitch());
+            }
+
 
 
             context.getSource().sendFeedback(Text.translatable("adventuremod.command.backpos.success"), true);

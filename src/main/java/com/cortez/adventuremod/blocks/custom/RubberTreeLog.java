@@ -33,7 +33,6 @@ public class RubberTreeLog extends Block {
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         super.randomTick(state, world, pos, random);
-        AdventureMod.LOGGER.info("Chamado");
         // Obtenha a hora atual do mundo em dias.
         int daysPassed = state.get(DAYS_PASSED);
 
