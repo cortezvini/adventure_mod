@@ -26,5 +26,9 @@
   "block.adventuremod.rubber_tree_leaves": "Rubber Leaves",
   "block.adventuremod.rubber_tree_log": "Rubber Tree Log",
   "block.adventuremod.rubber_tree_wood": "Rubber Wood",
-  "block.adventuremod.rubber_tree_sapling": "Rubber Tree Sapling"
+  "block.adventuremod.rubber_tree_sapling": "Rubber Tree Sapling",
+
+  "adventuremod.command.homeset": "Set home at %d",
+  "adventuremod.command.returnhome.success": "Player returned Home!",
+  "adventuremod.command.returnhome.notdefined": "No Home Position has been Set!"
 }

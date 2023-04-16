@@ -39,10 +39,8 @@ public class RubberTreeLog extends Block {
 
         if (daysPassed < MAX_DAYS) {
             world.setBlockState(pos, state.with(DAYS_PASSED, daysPassed + DAYS_INCREMENT));
-            System.out.println("Block updated: RubberTreeLog at " + pos.toString());
         } else {
             world.setBlockState(pos, ModBlocks.RUBBER_TREE_LOG_LATEX.getDefaultState()); // substitui o bloco RubberTreeLog por um bloco de carvalho
-            System.out.println("Block replaced: RubberTreeLog at " + pos.toString());
         }
     }
 

@@ -26,5 +26,9 @@
   "block.adventuremod.rubber_tree_leaves": "Folhas de Seringueira",
   "block.adventuremod.rubber_tree_log": "Tronco de Siringueira",
   "block.adventuremod.rubber_tree_wood": "Madeira de Siringueira",
-  "block.adventuremod.rubber_tree_sapling": "Muda de Siringueira"
+  "block.adventuremod.rubber_tree_sapling": "Muda de Siringueira",
+
+  "adventuremod.command.homeset": "Casa definida em %d",
+  "adventuremod.command.returnhome.success": "Você retornou para sua casa!",
+  "adventuremod.command.returnhome.notdefined": "Você não tem uma casa definida!"
 }
