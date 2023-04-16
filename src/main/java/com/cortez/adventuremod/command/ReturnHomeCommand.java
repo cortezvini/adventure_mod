@@ -32,7 +32,7 @@ public class ReturnHomeCommand
             return 1;
         }
         else {
-            context.getSource().sendFeedback(Text.literal("No Home Position has been Set!"), true);
+            context.getSource().sendFeedback(Text.translatable("adventuremod.command.returnhome.notdefined"), true);
             return -1;
         }
     }
