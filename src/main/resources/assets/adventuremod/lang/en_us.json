@@ -12,6 +12,13 @@
   "item.adventuremod.divingsuit_chestplate": "Diving Suit",
   "item.adventuremod.divingsuit_leggings": "Diving Pants",
   "item.adventuremod.divingsuit_boots": "Diving Boots",
+  "item.adventuremod.raw_tin": "Raw Tin",
+  "item.adventuremod.tin_ingot": "Tin Ingot",
+  "item.adventuremod.tin_nugget": "Tin Nugget",
+
+  "itemgroup.adventuremod": "Adventure Mod",
+
+  "effect.adventuremod.freeze": "Hypothermia",
 
   "item.minecraft.potion.effect.adventuremod_wither": "Decay of Potion",
   "item.minecraft.splash_potion.effect.adventuremod_wither": "Splash Potion of Decay",
@@ -23,10 +30,20 @@
   "item.minecraft.lingering_potion.effect.adventuremod_levitation": "Extended Potion of Levitation",
   "item.minecraft.tipped_arrow.effect.adventuremod_levitation": "Levitation Arrow",
 
+  "item.minecraft.potion.effect.adventuremod_freeze_potion": "Freezing Potion",
+  "item.minecraft.splash_potion.effect.adventuremod_freeze_potion": "Splash Freezing Potion",
+  "item.minecraft.lingering_potion.effect.adventuremod_freeze_potion": "Extended Freezing Potion",
+  "item.minecraft.tipped_arrow.effect.adventuremod_freeze_potion": "Freezing Arrow",
+
   "block.adventuremod.rubber_tree_leaves": "Rubber Leaves",
   "block.adventuremod.rubber_tree_log": "Rubber Tree Log",
   "block.adventuremod.rubber_tree_wood": "Rubber Wood",
   "block.adventuremod.rubber_tree_sapling": "Rubber Tree Sapling",
+  "block.adventuremod.tin_block": "Tin Block",
+  "block.adventuremod.tin_ore": "Tin Ore",
+  "block.adventuremod.deepslate_tin_ore": "Deepslate Tin Ore",
+  "block.adventuremod.nether_tin_ore": "Nether Tin Ore",
+  "block.adventuremod.end_tin_ore": "End Tin Ore",
 
   "adventuremod.command.homeset": "Set home at %d",
   "adventuremod.command.returnhome.success": "You returned to your home!",

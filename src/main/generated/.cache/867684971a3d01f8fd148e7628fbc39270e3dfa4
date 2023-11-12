@@ -1,3 +1,9 @@
-// 1.19.3	2023-04-10T10:20:25.5259338	Adventure Mod/adventuremod
+// 1.20.1	2023-11-12T17:17:47.4230658	Adventure Mod/adventuremod
+0bb569b4425ac1fd1832ed354e7d37e02270e978 data\adventuremod\worldgen\configured_feature\end_tin_ore.json
+1373eab3a059bf1283ef53105d1ad9b3fb00bd2e data\adventuremod\worldgen\placed_feature\tin_ore_placed.json
+69f3c6489453aa9b8ca51cc6e5df63ab5c71a24c data\adventuremod\worldgen\placed_feature\nether_tin_ore_placed.json
+0a222415208d4e386123b9e8a14818120eaa952b data\adventuremod\worldgen\configured_feature\nether_tin_ore.json
+8bfc6eea5d16f7c9b6c2a868964fc7410fe3b5a1 data\adventuremod\worldgen\configured_feature\tin_ore.json
 59c7c91b67f27e8865080fc6d39f30cbb8b72e7e data\adventuremod\worldgen\placed_feature\rubber_tree_placed.json
 0afbe85765f84f6e7c22cd34b85187bdb291613a data\adventuremod\worldgen\configured_feature\rubber_tree.json
+6b5e5313420785ddbc422f58b31adb9e394c184d data\adventuremod\worldgen\placed_feature\end_tin_ore_placed.json

@@ -12,6 +12,13 @@
   "item.adventuremod.divingsuit_chestplate": "Roupa de Mergulho",
   "item.adventuremod.divingsuit_leggings": "Calça de Mergulho",
   "item.adventuremod.divingsuit_boots": "Botas de Mergulho",
+  "item.adventuremod.raw_tin": "Estanho Bruto",
+  "item.adventuremod.tin_ingot": "Barra de Estanho",
+  "item.adventuremod.tin_nugget": "Pepita de Estanho",
+
+  "itemgroup.adventuremod": "Adventure Mod",
+
+  "effect.adventuremod.freeze": "Hipotermia",
 
   "item.minecraft.potion.effect.adventuremod_wither": "Poção de Decaimento",
   "item.minecraft.splash_potion.effect.adventuremod_wither": "Poção Arremessável de Decaimento",
@@ -23,10 +30,20 @@
   "item.minecraft.lingering_potion.effect.adventuremod_levitation": "Poção Prolongada de Levitação",
   "item.minecraft.tipped_arrow.effect.adventuremod_levitation": "Flecha de Levitação",
 
+  "item.minecraft.potion.effect.adventuremod_freeze_potion": "Poção de Congelamento",
+  "item.minecraft.splash_potion.effect.adventuremod_freeze_potion": "Poção Arremessável de Congelamento",
+  "item.minecraft.lingering_potion.effect.adventuremod_freeze_potion": "Poção Prolongada de Congelamento",
+  "item.minecraft.tipped_arrow.effect.adventuremod_freeze_potion": "Flecha de Congelamento",
+
   "block.adventuremod.rubber_tree_leaves": "Folhas de Seringueira",
   "block.adventuremod.rubber_tree_log": "Tronco de Siringueira",
   "block.adventuremod.rubber_tree_wood": "Madeira de Siringueira",
   "block.adventuremod.rubber_tree_sapling": "Muda de Siringueira",
+  "block.adventuremod.tin_block": "Bloco de Estanho",
+  "block.adventuremod.tin_ore": "Minério de Estanho",
+  "block.adventuremod.deepslate_tin_ore": "Minério de Estanho de Ardósia",
+  "block.adventuremod.nether_tin_ore": "Minério de Estanho do Nether",
+  "block.adventuremod.end_tin_ore": "Minério de Estanho do Fim",
 
   "adventuremod.command.homeset": "Casa definida em %d",
   "adventuremod.command.returnhome.success": "Você retornou para sua casa!",

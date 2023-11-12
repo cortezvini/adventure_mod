@@ -56,5 +56,6 @@
     "recipes": [
       "minecraft:divingsuit_leggings"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

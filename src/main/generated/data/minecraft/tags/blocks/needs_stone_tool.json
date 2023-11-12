@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "adventuremod:tin_block",
+    "adventuremod:tin_ore",
+    "adventuremod:deepslate_tin_ore",
+    "adventuremod:nether_tin_ore",
+    "adventuremod:end_tin_ore"
+  ]
+}

@@ -7,12 +7,11 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.Items;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 
 /**
  * Classe responsável por registrar e gerenciar todos os itens do mod.
@@ -62,46 +61,47 @@ public class ModItems
     /**
      *  Criação de um item "DIVINGSUIT_HELMET"
      */
-    public static final Item DIVINGSUIT_HELMET = registerItem("divingsuit_helmet", new ModArmorItem(ModArmorMaterials.DIVINGSUIT, EquipmentSlot.HEAD, new FabricItemSettings()));
+    public static final Item DIVINGSUIT_HELMET = registerItem("divingsuit_helmet", new ModArmorItem(ModArmorMaterials.DIVINGSUIT, ArmorItem.Type.HELMET, new FabricItemSettings()));
     /**
      *  Criação de um item "DIVINGSUIT_CHESTPLATE"
      */
-    public static final Item DIVINGSUIT_CHESTPLATE = registerItem("divingsuit_chestplate", new ModArmorItem(ModArmorMaterials.DIVINGSUIT, EquipmentSlot.CHEST, new FabricItemSettings()));
+    public static final Item DIVINGSUIT_CHESTPLATE = registerItem("divingsuit_chestplate", new ModArmorItem(ModArmorMaterials.DIVINGSUIT, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
     /**
      *  Criação de um item "DIVINGSUIT_LEGGINGS"
      */
-    public static final Item DIVINGSUIT_LEGGINGS = registerItem("divingsuit_leggings", new ModArmorItem(ModArmorMaterials.DIVINGSUIT, EquipmentSlot.LEGS, new FabricItemSettings()));
+    public static final Item DIVINGSUIT_LEGGINGS = registerItem("divingsuit_leggings", new ModArmorItem(ModArmorMaterials.DIVINGSUIT, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
     /**
      *  Criação de um item "DIVINGSUIT_BOOTS"
      */
-    public static final Item DIVINGSUIT_BOOTS = registerItem("divingsuit_boots", new ModArmorItem(ModArmorMaterials.DIVINGSUIT, EquipmentSlot.FEET, new FabricItemSettings()));
+    public static final Item DIVINGSUIT_BOOTS = registerItem("divingsuit_boots", new ModArmorItem(ModArmorMaterials.DIVINGSUIT, ArmorItem.Type.BOOTS, new FabricItemSettings()));
+
+    public static final Item RAW_TIN = registerItem("raw_tin", new Item(new FabricItemSettings()));
+
+    public static final Item TIN_INGOT = registerItem("tin_ingot", new Item(new FabricItemSettings()));
+
+    public static final Item TIN_NUGGET = registerItem("tin_nugget", new Item(new FabricItemSettings()));
 
     /**
      * Método para adicionar um item em um grupo de itens
      */
-    public static void addToItemGroup(ItemGroup group, Item item) {
-        ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
+    private static void addToItemGroup(FabricItemGroupEntries entries) {
+        entries.add(MAGIC_FRUIT);
+        entries.add(WITHERINGPOWDER);
+        entries.add(LEVITATIONPOWDER);
+        entries.add(OREDETECTOR);
+        entries.add(OREDETECTORGENERIC);
+        entries.add(LATEX_EXTRACTOR);
+        entries.add(LATEX);
+        entries.add(RUBBER);
+        entries.add(DIVINGSUIT_HELMET);
+        entries.add(DIVINGSUIT_CHESTPLATE);
+        entries.add(DIVINGSUIT_LEGGINGS);
+        entries.add(DIVINGSUIT_BOOTS);
+        entries.add(RAW_TIN);
+        entries.add(TIN_INGOT);
+        entries.add(TIN_NUGGET);
     }
 
-
-    /**
-     * Adiciona todos os itens aos seus respectivos grupos de itens
-     */
-    public static void addItemsToItemGroups()
-    {
-        addToItemGroup(ModGroups.ADVENTUREMOD, MAGIC_FRUIT);
-        addToItemGroup(ModGroups.ADVENTUREMOD, WITHERINGPOWDER);
-        addToItemGroup(ModGroups.ADVENTUREMOD, LEVITATIONPOWDER);
-        addToItemGroup(ModGroups.ADVENTUREMOD, OREDETECTOR);
-        addToItemGroup(ModGroups.ADVENTUREMOD, OREDETECTORGENERIC);
-        addToItemGroup(ModGroups.ADVENTUREMOD, LATEX_EXTRACTOR);
-        addToItemGroup(ModGroups.ADVENTUREMOD, LATEX);
-        addToItemGroup(ModGroups.ADVENTUREMOD, RUBBER);
-        addToItemGroup(ModGroups.ADVENTUREMOD, DIVINGSUIT_HELMET);
-        addToItemGroup(ModGroups.ADVENTUREMOD, DIVINGSUIT_CHESTPLATE);
-        addToItemGroup(ModGroups.ADVENTUREMOD, DIVINGSUIT_LEGGINGS);
-        addToItemGroup(ModGroups.ADVENTUREMOD, DIVINGSUIT_BOOTS);
-    }
 
     /**
      *  Registra o item no jogo, associando-o a um nome identificador
@@ -114,6 +114,6 @@ public class ModItems
      * Registra todos os itens do mod
      */
     public static void registerItems(){
-        addItemsToItemGroups();
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addToItemGroup);
     }
 }

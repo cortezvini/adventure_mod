@@ -30,5 +30,6 @@
     "recipes": [
       "minecraft:rubber_from_smelting_latex"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

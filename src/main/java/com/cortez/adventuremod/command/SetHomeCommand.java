@@ -10,6 +10,8 @@ import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 
+import java.util.function.Supplier;
+
 public class SetHomeCommand {
 
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher, CommandRegistryAccess commandRegistryAccess, CommandManager.RegistrationEnvironment registrationEnvironment) {
@@ -25,8 +27,14 @@ public class SetHomeCommand {
         player.getPersistentData().putIntArray("homepos",
                 new int[] {playerPos.getX(), playerPos.getY(), playerPos.getZ() });
 
+        Supplier<Text> homeset = new Supplier<Text>() {
+            @Override
+            public Text get() {
+                return Text.translatable("adventuremod.command.homeset", pos);
+            }
+        };
 
-        context.getSource().sendFeedback(Text.translatable("adventuremod.command.homeset", pos), true);
+        context.getSource().sendFeedback(homeset, true);
         return 1;
     }
 

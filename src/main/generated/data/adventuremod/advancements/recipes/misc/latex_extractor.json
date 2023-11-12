@@ -43,5 +43,6 @@
     "recipes": [
       "minecraft:latex_extractor"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

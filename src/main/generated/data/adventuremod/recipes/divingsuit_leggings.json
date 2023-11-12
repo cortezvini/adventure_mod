@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "adventuremod:divingsuit_leggings"
-  }
+  },
+  "show_notification": true
 }

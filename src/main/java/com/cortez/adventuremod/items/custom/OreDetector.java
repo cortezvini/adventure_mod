@@ -1,5 +1,6 @@
 package com.cortez.adventuremod.items.custom;
 
+import com.cortez.adventuremod.blocks.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
@@ -113,6 +114,10 @@ public class OreDetector extends Item {
                 || block == Blocks.AMETHYST_BLOCK
                 || block == Blocks.NETHER_GOLD_ORE
                 || block == Blocks.NETHER_QUARTZ_ORE
-                || block == Blocks.ANCIENT_DEBRIS;
+                || block == Blocks.ANCIENT_DEBRIS
+                || block == ModBlocks.TIN_ORE
+                || block == ModBlocks.DEEPSLATE_TIN_ORE
+                || block == ModBlocks.NETHER_TIN_ORE
+                || block == ModBlocks.END_TIN_ORE;
     }
 }

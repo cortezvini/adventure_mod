@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "adventuremod:latex_extractor"
-  }
+  },
+  "show_notification": true
 }

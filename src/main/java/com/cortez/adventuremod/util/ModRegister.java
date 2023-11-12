@@ -6,6 +6,7 @@ import com.cortez.adventuremod.blocks.ModFlammableBlockRegistry;
 import com.cortez.adventuremod.command.BackCommand;
 import com.cortez.adventuremod.command.ReturnHomeCommand;
 import com.cortez.adventuremod.command.SetHomeCommand;
+import com.cortez.adventuremod.effect.ModEffects;
 import com.cortez.adventuremod.event.ModPlayerEventCopyFrom;
 import com.cortez.adventuremod.event.PlayerTickHandler;
 import com.cortez.adventuremod.groups.ModGroups;
@@ -27,6 +28,7 @@ public class ModRegister
         registerGroups();
         registerItems();
         registerBlocks();
+        registerEffects();
         registerPotions();
         registerModifyLootTables();
         regiterWorldGen();
@@ -39,7 +41,7 @@ public class ModRegister
      */
     private static void registerGroups(){
         AdventureMod.LOGGER.info("Register Groups " + AdventureMod.MODID);
-        ModGroups.registerGroup();
+        ModGroups.registerItemGroups();
     }
 
     /**
@@ -91,5 +93,9 @@ public class ModRegister
     private static void registerEvents() {
         ServerPlayerEvents.COPY_FROM.register(new ModPlayerEventCopyFrom());
         ServerTickEvents.START_SERVER_TICK.register(new PlayerTickHandler());
+    }
+
+    private static void registerEffects(){
+        ModEffects.registerEffects();
     }
 }

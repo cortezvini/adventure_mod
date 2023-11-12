@@ -43,5 +43,6 @@
     "recipes": [
       "minecraft:divingsuit_boots"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

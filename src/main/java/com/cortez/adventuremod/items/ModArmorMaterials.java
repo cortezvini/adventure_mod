@@ -1,6 +1,8 @@
 package com.cortez.adventuremod.items;
 
+import com.cortez.adventuremod.AdventureMod;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
@@ -18,7 +20,6 @@ public enum ModArmorMaterials implements ArmorMaterial {
     DIVINGSUIT("divingsuit", 5, new int[]{1, 2, 3, 1}, 15,
     SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0f, 0.0f, () -> Ingredient.ofItems(Items.LEATHER));
 
-    private static final int[] BASE_DURABILITY;
     private final String name;
     private final int durabilityMultiplier;
     private final int[] protectionAmounts;
@@ -26,10 +27,12 @@ public enum ModArmorMaterials implements ArmorMaterial {
     private final SoundEvent equipSound;
     private final float toughness;
     private final float knockbackResistance;
-    private final Lazy<Ingredient> repairIngredientSupplier;
+    private final Supplier<Ingredient> repairIngredient;
 
-    // Construtor do tipo de material de armadura
-    private ModArmorMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredientSupplier) {
+    private static final int[] BASE_DURABILITY = { 11, 16, 15, 13 };
+
+    ModArmorMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantability, SoundEvent equipSound,
+                      float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
         this.name = name;
         this.durabilityMultiplier = durabilityMultiplier;
         this.protectionAmounts = protectionAmounts;
@@ -37,59 +40,47 @@ public enum ModArmorMaterials implements ArmorMaterial {
         this.equipSound = equipSound;
         this.toughness = toughness;
         this.knockbackResistance = knockbackResistance;
-        this.repairIngredientSupplier = new Lazy<Ingredient>(repairIngredientSupplier);
+        this.repairIngredient = repairIngredient;
     }
 
-    // Retorna a durabilidade total da armadura para um determinado slot
     @Override
-    public int getDurability(EquipmentSlot slot) {
-        return BASE_DURABILITY[slot.getEntitySlotId()] * this.durabilityMultiplier;
+    public int getDurability(ArmorItem.Type type) {
+        return BASE_DURABILITY[type.ordinal()] * this.durabilityMultiplier;
     }
 
-    // Retorna a quantidade de pontos de proteção da armadura para um determinado slot
     @Override
-    public int getProtectionAmount(EquipmentSlot slot) {
-        return this.protectionAmounts[slot.getEntitySlotId()];
+    public int getProtection(ArmorItem.Type type) {
+        return protectionAmounts[type.ordinal()];
     }
 
-    // Retorna a enchantability do tipo de material de armadura
     @Override
     public int getEnchantability() {
         return this.enchantability;
     }
 
-    // Retorna o som a ser tocado ao equipar a armadura
     @Override
     public SoundEvent getEquipSound() {
         return this.equipSound;
     }
 
-    // Retorna o ingrediente necessário para reparar a armadura
     @Override
     public Ingredient getRepairIngredient() {
-        return this.repairIngredientSupplier.get();
+        return this.repairIngredient.get();
     }
 
-    // Retorna o nome do tipo de material de armadura
     @Override
     public String getName() {
-        return this.name;
+        return AdventureMod.MODID + ":" + this.name;
     }
 
-    // Retorna a resistência da armadura a danos
     @Override
     public float getToughness() {
         return this.toughness;
     }
 
-    // Retorna a resistência da armadura a empurrões (knockback)
     @Override
     public float getKnockbackResistance() {
         return this.knockbackResistance;
     }
 
-    // Bloco estático que inicializa a variável BASE_DURABILITY com os valores padrão para cada slot de armadura
-    static {
-        BASE_DURABILITY = new int[]{13, 15, 16, 11};
-    }
 }

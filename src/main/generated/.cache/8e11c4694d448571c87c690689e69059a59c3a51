@@ -1,5 +1,10 @@
-// 1.19.3	2023-04-10T10:20:25.5309304	Adventure Mod/Block Loot Tables
-b3b7b26a5bbdf4153e1927fa6af1dc2e1d045f68 data\adventuremod\loot_tables\blocks\rubber_tree_log.json
+// 1.20.1	2023-11-12T17:17:47.4290685	Adventure Mod/Block Loot Tables
 b3b7b26a5bbdf4153e1927fa6af1dc2e1d045f68 data\adventuremod\loot_tables\blocks\rubber_tree_log_latex.json
-1900a88c9c852527c47b290912a6d23dfc69de7d data\adventuremod\loot_tables\blocks\rubber_tree_leaves.json
+90debb08acb5bed8483f1a46df80c10ea6dd6e77 data\adventuremod\loot_tables\blocks\nether_tin_ore.json
+90debb08acb5bed8483f1a46df80c10ea6dd6e77 data\adventuremod\loot_tables\blocks\tin_ore.json
+90debb08acb5bed8483f1a46df80c10ea6dd6e77 data\adventuremod\loot_tables\blocks\deepslate_tin_ore.json
 caf02ea750dc1b69c771869fc71d9f8a138bb190 data\adventuremod\loot_tables\blocks\rubber_tree_sapling.json
+5e56e40782158cdfd1f3160cfcfc635ae47f5ed6 data\adventuremod\loot_tables\blocks\tin_block.json
+99ebd84369a676011928672c95cc888825e21c98 data\adventuremod\loot_tables\blocks\rubber_tree_leaves.json
+b3b7b26a5bbdf4153e1927fa6af1dc2e1d045f68 data\adventuremod\loot_tables\blocks\rubber_tree_log.json
+90debb08acb5bed8483f1a46df80c10ea6dd6e77 data\adventuremod\loot_tables\blocks\end_tin_ore.json

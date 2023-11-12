@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "adventuremod:tin_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "adventuremod:tin_nugget"
+  }
+}

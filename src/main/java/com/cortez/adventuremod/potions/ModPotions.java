@@ -1,10 +1,12 @@
 package com.cortez.adventuremod.potions;
 
 import com.cortez.adventuremod.AdventureMod;
+import com.cortez.adventuremod.effect.ModEffects;
 import com.cortez.adventuremod.items.ModItems;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.Items;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.Potions;
 import net.minecraft.recipe.BrewingRecipeRegistry;
@@ -21,6 +23,8 @@ public class ModPotions
     public static Potion WITHER;
     public static Potion LEVITATION;
 
+    public static Potion FREEZE;
+
 
     /**
      *  Método para registrar as poções
@@ -30,6 +34,7 @@ public class ModPotions
         // Registra as poções e atribui a variável correspondente
         WITHER = registerPotion(AdventureMod.MODID+"_wither", StatusEffects.WITHER, 900, 0);
         LEVITATION = registerPotion(AdventureMod.MODID+"_levitation", StatusEffects.LEVITATION, 900, 0);
+        FREEZE = registerPotion(AdventureMod.MODID+"_freeze_potion", ModEffects.FREEZE, 1800, 0);
 
         // Registra as receitas de poções
         registerPotionsRecipe();
@@ -53,5 +58,7 @@ public class ModPotions
         BrewingRecipeRegistry.registerPotionRecipe(Potions.AWKWARD, ModItems.WITHERINGPOWDER, WITHER);
         // Registra uma receita de poção usando o item AWKWARD como ingrediente base, o item LEVITATIONPOWDER como catalisador e a poção LEVITATION como resultado
         BrewingRecipeRegistry.registerPotionRecipe(Potions.AWKWARD, ModItems.LEVITATIONPOWDER, LEVITATION);
+
+        BrewingRecipeRegistry.registerPotionRecipe(Potions.AWKWARD, Items.SNOWBALL, FREEZE);
     }
 }

@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "adventuremod:divingsuit_chestplate"
-  }
+  },
+  "show_notification": true
 }

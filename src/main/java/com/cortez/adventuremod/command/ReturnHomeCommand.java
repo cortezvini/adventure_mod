@@ -9,6 +9,8 @@ import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.text.Text;
 
+import java.util.function.Supplier;
+
 public class ReturnHomeCommand
 {
 
@@ -27,12 +29,24 @@ public class ReturnHomeCommand
             int[] playerPos = player.getPersistentData().getIntArray("homepos");
             context.getSource().getPlayer().requestTeleport(playerPos[0], playerPos[1], playerPos[2]);
 
+            Supplier<Text> success = new Supplier<Text>() {
+                @Override
+                public Text get() {
+                    return Text.translatable("adventuremod.command.returnhome.success");
+                }
+            };
 
-            context.getSource().sendFeedback(Text.translatable("adventuremod.command.returnhome.success"), true);
+            context.getSource().sendFeedback(success, true);
             return 1;
         }
         else {
-            context.getSource().sendFeedback(Text.translatable("adventuremod.command.returnhome.notdefined"), true);
+            Supplier<Text> notdefined = new Supplier<Text>() {
+                @Override
+                public Text get() {
+                    return Text.translatable("adventuremod.command.returnhome.notdefined");
+                }
+            };
+            context.getSource().sendFeedback(notdefined, true);
             return -1;
         }
     }

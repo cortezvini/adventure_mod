@@ -19,5 +19,6 @@
   ],
   "result": {
     "item": "adventuremod:divingsuit_helmet"
-  }
+  },
+  "show_notification": true
 }

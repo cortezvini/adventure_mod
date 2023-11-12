@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "adventuremod:divingsuit_boots"
-  }
+  },
+  "show_notification": true
 }

@@ -8,8 +8,10 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.ShapedRecipe;
+import net.minecraft.recipe.ShapelessRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
 
@@ -31,6 +33,35 @@ public class ModRecipeGenerator extends FabricRecipeProvider
         //Fornalha
         offerSmelting(exporter, List.of(ModItems.LATEX), RecipeCategory.MISC, ModItems.RUBBER, 0.0F, 200, "adventuremod");
         offerSmelting(exporter, List.of(ModBlocks.RUBBER_TREE_LOG), RecipeCategory.MISC, Blocks.OAK_LOG, 0.0F, 200, "adventuremod");
+        offerSmelting(exporter, List.of(ModItems.RAW_TIN), RecipeCategory.MISC, ModItems.TIN_INGOT, 0.0F, 200, "adventuremod");
+        offerBlasting(exporter, List.of(ModItems.RAW_TIN), RecipeCategory.MISC, ModItems.TIN_INGOT, 0.0F, 100, "adventuremod");
+
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TIN_INGOT)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .input('#', ModItems.TIN_NUGGET)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.TIN_NUGGET), FabricRecipeProvider.conditionsFromItem(ModItems.TIN_NUGGET))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.TIN_INGOT)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.TIN_BLOCK)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .input('#', ModItems.TIN_INGOT)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.TIN_INGOT), FabricRecipeProvider.conditionsFromItem(ModItems.TIN_INGOT))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.TIN_BLOCK)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TIN_NUGGET, 9)
+                .input(ModItems.TIN_INGOT)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.TIN_INGOT), FabricRecipeProvider.conditionsFromItem(ModItems.TIN_INGOT))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.TIN_NUGGET)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TIN_INGOT, 9)
+                .input(ModBlocks.TIN_BLOCK)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TIN_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.TIN_BLOCK))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.TIN_INGOT) + "_block"));
 
         //Craft table
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LATEX_EXTRACTOR)

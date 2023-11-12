@@ -15,8 +15,8 @@ import net.minecraft.world.World;
 import java.util.Map;
 
 public class ModArmorItem extends ArmorItem {
-    public ModArmorItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
-        super(material, slot, settings);
+    public ModArmorItem(ArmorMaterial material, Type type, Settings settings) {
+        super(material, type, settings);
     }
 
     private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_TO_EFFECT_NIGHT_VISION_MAP =

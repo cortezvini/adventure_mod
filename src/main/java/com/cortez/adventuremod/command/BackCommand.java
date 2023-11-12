@@ -13,6 +13,8 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
 
+import java.util.function.Supplier;
+
 public class BackCommand
 {
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher, CommandRegistryAccess commandRegistryAccess, CommandManager.RegistrationEnvironment registrationEnvironment) {
@@ -46,13 +48,27 @@ public class BackCommand
             }
 
 
+            Supplier<Text> success = new Supplier<Text>() {
+                @Override
+                public Text get() {
+                    return Text.translatable("adventuremod.command.backpos.success");
+                }
+            };
 
-            context.getSource().sendFeedback(Text.translatable("adventuremod.command.backpos.success"), true);
+            context.getSource().sendFeedback(success, true);
             return 1;
         }
         else {
-            context.getSource().sendFeedback(Text.translatable("adventuremod.command.backpos.notdefined"), true);
+            Supplier<Text> notdefined = new Supplier<Text>() {
+                @Override
+                public Text get() {
+                    return Text.translatable("adventuremod.command.backpos.notdefined");
+                }
+            };
+
+            context.getSource().sendFeedback(notdefined, true);
             return -1;
         }
     }
+
 }

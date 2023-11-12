@@ -1,9 +1,6 @@
 package com.cortez.adventuremod;
 
-import com.cortez.adventuremod.data.ModLootTableGenerator;
-import com.cortez.adventuremod.data.ModModelProvider;
-import com.cortez.adventuremod.data.ModRecipeGenerator;
-import com.cortez.adventuremod.data.ModWorldGenerator;
+import com.cortez.adventuremod.data.*;
 import com.cortez.adventuremod.world.ModConfiguredFeatures;
 import com.cortez.adventuremod.world.ModPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -24,6 +21,7 @@ public class AdventureModDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(ModWorldGenerator::new);
         pack.addProvider(ModLootTableGenerator::new);
         pack.addProvider(ModRecipeGenerator::new);
+        pack.addProvider(ModBlockTagProvider::new);
     }
 
     @Override
