@@ -20,14 +20,46 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider{
                 .add(ModBlocks.TIN_ORE)
                 .add(ModBlocks.DEEPSLATE_TIN_ORE)
                 .add(ModBlocks.NETHER_TIN_ORE)
-                .add(ModBlocks.END_TIN_ORE);
+                .add(ModBlocks.END_TIN_ORE)
+                .add(ModBlocks.NETHER_COAL_ORE)
+                .add(ModBlocks.END_COAL_ORE)
+                .add(ModBlocks.NETHER_IRON_ORE)
+                .add(ModBlocks.END_IRON_ORE)
+                .add(ModBlocks.NETHER_COPPER_ORE)
+                .add(ModBlocks.END_COPPER_ORE)
+                .add(ModBlocks.END_GOLD_ORE)
+                .add(ModBlocks.NETHER_REDSTONE_ORE)
+                .add(ModBlocks.END_REDSTONE_ORE)
+                .add(ModBlocks.NETHER_LAPISLAZULI_ORE)
+                .add(ModBlocks.END_LAPISLAZULI_ORE)
+                .add(ModBlocks.NETHER_DIAMOND_ORE)
+                .add(ModBlocks.END_DIAMOND_ORE)
+                .add(ModBlocks.NETHER_EMERALD_ORE)
+                .add(ModBlocks.END_EMERALD_ORE);
+
+
 
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.TIN_BLOCK)
                 .add(ModBlocks.TIN_ORE)
                 .add(ModBlocks.DEEPSLATE_TIN_ORE)
                 .add(ModBlocks.NETHER_TIN_ORE)
-                .add(ModBlocks.END_TIN_ORE);
+                .add(ModBlocks.END_TIN_ORE)
+                .add(ModBlocks.NETHER_IRON_ORE)
+                .add(ModBlocks.END_IRON_ORE)
+                .add(ModBlocks.NETHER_COPPER_ORE)
+                .add(ModBlocks.END_COPPER_ORE)
+                .add(ModBlocks.NETHER_LAPISLAZULI_ORE)
+                .add(ModBlocks.END_LAPISLAZULI_ORE);
+
+        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.END_GOLD_ORE)
+                .add(ModBlocks.NETHER_REDSTONE_ORE)
+                .add(ModBlocks.END_REDSTONE_ORE)
+                .add(ModBlocks.NETHER_DIAMOND_ORE)
+                .add(ModBlocks.END_DIAMOND_ORE)
+                .add(ModBlocks.NETHER_EMERALD_ORE)
+                .add(ModBlocks.END_EMERALD_ORE);
 
 
     }

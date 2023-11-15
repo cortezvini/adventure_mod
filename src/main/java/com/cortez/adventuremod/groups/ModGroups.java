@@ -47,6 +47,21 @@ public class ModGroups {
                         entries.add(ModBlocks.DEEPSLATE_TIN_ORE);
                         entries.add(ModBlocks.NETHER_TIN_ORE);
                         entries.add(ModBlocks.END_TIN_ORE);
+                        entries.add(ModBlocks.NETHER_COAL_ORE);
+                        entries.add(ModBlocks.END_COAL_ORE);
+                        entries.add(ModBlocks.NETHER_IRON_ORE);
+                        entries.add(ModBlocks.END_IRON_ORE);
+                        entries.add(ModBlocks.NETHER_COPPER_ORE);
+                        entries.add(ModBlocks.END_COPPER_ORE);
+                        entries.add(ModBlocks.END_GOLD_ORE);
+                        entries.add(ModBlocks.NETHER_REDSTONE_ORE);
+                        entries.add(ModBlocks.END_REDSTONE_ORE);
+                        entries.add(ModBlocks.NETHER_LAPISLAZULI_ORE);
+                        entries.add(ModBlocks.END_LAPISLAZULI_ORE);
+                        entries.add(ModBlocks.NETHER_DIAMOND_ORE);
+                        entries.add(ModBlocks.END_DIAMOND_ORE);
+                        entries.add(ModBlocks.NETHER_EMERALD_ORE);
+                        entries.add(ModBlocks.END_EMERALD_ORE);
                     }).build());
 
 

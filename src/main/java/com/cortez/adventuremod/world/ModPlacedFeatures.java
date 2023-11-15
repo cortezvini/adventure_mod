@@ -23,20 +23,122 @@ public class ModPlacedFeatures
     public static final RegistryKey<PlacedFeature> NETHER_TIN_ORE_PLACED_KEY = registerKey("nether_tin_ore_placed");
     public static final RegistryKey<PlacedFeature> END_TIN_ORE_PLACED_KEY = registerKey("end_tin_ore_placed");
 
+    public static final RegistryKey<PlacedFeature> NETHER_COAL_ORE_PLACED_KEY = registerKey("nether_coal_ore_placed");
+    public static final RegistryKey<PlacedFeature> END_COAL_ORE_PLACED_KEY = registerKey("end_coal_ore_placed");
+
+    public static final RegistryKey<PlacedFeature> NETHER_IRON_ORE_PLACED_KEY = registerKey("nether_iron_ore_placed");
+    public static final RegistryKey<PlacedFeature> END_IRON_ORE_PLACED_KEY = registerKey("end_iron_ore_placed");
+
+
+    public static final RegistryKey<PlacedFeature> NETHER_COPPER_ORE_PLACED_KEY = registerKey("nether_copper_ore_placed");
+
+    public static final RegistryKey<PlacedFeature> END_COPPER_ORE_PLACED_KEY = registerKey("end_copper_ore_placed");
+
+    public static final RegistryKey<PlacedFeature> END_GOLD_ORE_PLACED_KEY = registerKey("end_gold_ore_placed");
+
+    public static final RegistryKey<PlacedFeature> NETHER_REDSTONE_ORE_PLACED_KEY = registerKey("nether_redstone_ore_placed");
+
+    public static final RegistryKey<PlacedFeature> END_REDSTONE_ORE_PLACED_KEY = registerKey("end_redstone_ore_placed");
+
+
+    public static final RegistryKey<PlacedFeature> NETHER_LAPISLAZULI_ORE_PLACED_KEY = registerKey("nether_lapislazuli_ore_placed");
+
+    public static final RegistryKey<PlacedFeature> END_LAPISLAZULI_ORE_PLACED_KEY = registerKey("end_lapislazuli_ore_placed");
+
+
+    public static final RegistryKey<PlacedFeature> NETHER_DIAMOND_ORE_PLACED_KEY = registerKey("nether_diamond_ore_placed");
+
+    public static final RegistryKey<PlacedFeature> END_DIAMOND_ORE_PLACED_KEY = registerKey("end_diamond_ore_placed");
+
+    public static final RegistryKey<PlacedFeature> NETHER_EMERALD_ORE_PLACED_KEY = registerKey("nether_emerald_ore_placed");
+
+    public static final RegistryKey<PlacedFeature> END_EMERALD_ORE_PLACED_KEY = registerKey("end_emerald_ore_placed");
+
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
+        //Minérios
 
         register(context, TIN_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.TIN_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(12, // Veins per Chunk
+                ModOrePlacement.modifiersWithCount(10, // Veins per Chunk
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
 
         register(context, NETHER_TIN_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.NETHER_TIN_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(12, // Veins per Chunk
-                        HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
+                ModOrePlacement.modifiersWithCount(10, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(25), YOffset.fixed(115))));
+
         register(context, END_TIN_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.END_TIN_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(12, // Veins per Chunk
-                        HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
+                ModOrePlacement.modifiersWithCount(5, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(40), YOffset.fixed(65))));
+
+
+        register(context, NETHER_COAL_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.NETHER_COAL_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(15, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(25), YOffset.fixed(115))));
+
+
+        register(context, END_COAL_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.END_COAL_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(5, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(25), YOffset.fixed(55))));
+
+        register(context, NETHER_IRON_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.NETHER_IRON_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(10, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(40), YOffset.fixed(110))));
+
+
+        register(context, END_IRON_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.END_IRON_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(5, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(40), YOffset.fixed(65))));
+
+
+        register(context, NETHER_COPPER_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.NETHER_COPPER_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(8, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(35), YOffset.fixed(75))));
+
+        register(context, END_COPPER_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.END_COPPER_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(5, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(35), YOffset.fixed(75))));
+
+        register(context, END_GOLD_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.END_GOLD_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(4, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(30), YOffset.fixed(65))));
+
+
+        register(context, NETHER_REDSTONE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.NETHER_REDSTONE_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(8, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(80), YOffset.fixed(115))));
+
+        register(context, END_REDSTONE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.END_REDSTONE_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(3, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(35), YOffset.fixed(75))));
+
+        register(context, NETHER_LAPISLAZULI_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.NETHER_LAPISLAZULI_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(2, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(30), YOffset.fixed(60))));
+
+        register(context, END_LAPISLAZULI_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.END_LAPISLAZULI_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(2, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(30), YOffset.fixed(60))));
+
+
+        register(context, NETHER_DIAMOND_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.NETHER_DIAMOND_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(3, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(15), YOffset.fixed(30))));
+
+        register(context, END_DIAMOND_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.END_DIAMOND_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(3, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(30), YOffset.fixed(60))));
+
+        register(context, NETHER_EMERALD_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.NETHER_EMERALD_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(2, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(25), YOffset.fixed(55))));
+
+        register(context, END_EMERALD_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.END_EMERALD_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(2, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(25), YOffset.fixed(55))));
+
+
+        //Arvores
 
         register(context, RUBBER_TREE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.RUBBER_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(0, 0.04f, 2), ModBlocks.RUBBER_TREE_SAPLING));

@@ -38,6 +38,21 @@ public class ModModelProvider extends FabricModelProvider
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_TIN_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.NETHER_TIN_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_TIN_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.NETHER_COAL_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_COAL_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.NETHER_IRON_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_IRON_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.NETHER_COPPER_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_COPPER_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_GOLD_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.NETHER_REDSTONE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_REDSTONE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.NETHER_LAPISLAZULI_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_LAPISLAZULI_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.NETHER_DIAMOND_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_DIAMOND_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.NETHER_EMERALD_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_EMERALD_ORE);
     }
 
     // Gera modelos para itens

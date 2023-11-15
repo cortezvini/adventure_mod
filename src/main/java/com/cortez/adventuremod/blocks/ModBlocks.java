@@ -43,6 +43,38 @@ public class ModBlocks
 
     public static final Block END_TIN_ORE = registerBlock("end_tin_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).sounds(BlockSoundGroup.STONE).requiresTool()));
 
+
+    public static final Block NETHER_COAL_ORE = registerBlock("nether_coal_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.NETHER_GOLD_ORE).sounds(BlockSoundGroup.NETHER_ORE).requiresTool(), UniformIntProvider.create(0, 1)));
+
+    public static final Block END_COAL_ORE = registerBlock("end_coal_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).sounds(BlockSoundGroup.STONE).requiresTool()));
+
+    public static final Block NETHER_IRON_ORE = registerBlock("nether_iron_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.NETHER_GOLD_ORE).sounds(BlockSoundGroup.NETHER_ORE).requiresTool(), UniformIntProvider.create(0, 1)));
+
+    public static final Block END_IRON_ORE = registerBlock("end_iron_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).sounds(BlockSoundGroup.STONE).requiresTool()));
+
+    public static final Block NETHER_COPPER_ORE = registerBlock("nether_copper_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.NETHER_GOLD_ORE).sounds(BlockSoundGroup.NETHER_ORE).requiresTool(), UniformIntProvider.create(0, 1)));
+
+    public static final Block END_COPPER_ORE = registerBlock("end_copper_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).sounds(BlockSoundGroup.STONE).requiresTool()));
+
+    public static final Block END_GOLD_ORE = registerBlock("end_gold_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).sounds(BlockSoundGroup.STONE).requiresTool()));
+
+    public static final Block NETHER_REDSTONE_ORE = registerBlock("nether_redstone_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.NETHER_GOLD_ORE).sounds(BlockSoundGroup.NETHER_ORE).requiresTool(), UniformIntProvider.create(0, 1)));
+
+    public static final Block END_REDSTONE_ORE = registerBlock("end_redstone_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).sounds(BlockSoundGroup.STONE).requiresTool()));
+
+    public static final Block NETHER_LAPISLAZULI_ORE = registerBlock("nether_lapislazuli_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.NETHER_GOLD_ORE).sounds(BlockSoundGroup.NETHER_ORE).requiresTool(), UniformIntProvider.create(0, 1)));
+
+    public static final Block END_LAPISLAZULI_ORE = registerBlock("end_lapislazuli_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).sounds(BlockSoundGroup.STONE).requiresTool()));
+
+
+    public static final Block NETHER_DIAMOND_ORE = registerBlock("nether_diamond_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.NETHER_GOLD_ORE).sounds(BlockSoundGroup.NETHER_ORE).requiresTool(), UniformIntProvider.create(0, 1)));
+
+    public static final Block END_DIAMOND_ORE = registerBlock("end_diamond_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).sounds(BlockSoundGroup.STONE).requiresTool()));
+
+    public static final Block NETHER_EMERALD_ORE = registerBlock("nether_emerald_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.NETHER_GOLD_ORE).sounds(BlockSoundGroup.NETHER_ORE).requiresTool(), UniformIntProvider.create(0, 1)));
+
+    public static final Block END_EMERALD_ORE = registerBlock("end_emerald_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).sounds(BlockSoundGroup.STONE).requiresTool()));
+
     private static Block registerBlockWithoutItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, new Identifier(AdventureMod.MODID, name), block);
     }

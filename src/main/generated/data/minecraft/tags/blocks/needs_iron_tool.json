@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "adventuremod:end_gold_ore",
+    "adventuremod:nether_redstone_ore",
+    "adventuremod:end_redstone_ore",
+    "adventuremod:nether_diamond_ore",
+    "adventuremod:end_diamond_ore",
+    "adventuremod:nether_emerald_ore",
+    "adventuremod:end_emerald_ore"
+  ]
+}

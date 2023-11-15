@@ -1,3 +1,4 @@
-// 1.20.1	2023-11-12T17:17:47.4270651	Adventure Mod/Tags for minecraft:block
-94dbf006227e629e32f0d402c02f78afdd8159ed data\minecraft\tags\blocks\mineable\pickaxe.json
-94dbf006227e629e32f0d402c02f78afdd8159ed data\minecraft\tags\blocks\needs_stone_tool.json
+// 1.20.1	2023-11-15T19:43:08.5376572	Adventure Mod/Tags for minecraft:block
+46cae85f75b1560cac4034c0dc756a06888114d4 data\minecraft\tags\blocks\mineable\pickaxe.json
+1ad05b30ddcfd9b36a4c4e7f609355c4f333e565 data\minecraft\tags\blocks\needs_stone_tool.json
+4cef250d9f947dd747cc294b68ada82da7bb0e73 data\minecraft\tags\blocks\needs_iron_tool.json

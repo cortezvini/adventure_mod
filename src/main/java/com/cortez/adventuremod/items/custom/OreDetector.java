@@ -118,6 +118,21 @@ public class OreDetector extends Item {
                 || block == ModBlocks.TIN_ORE
                 || block == ModBlocks.DEEPSLATE_TIN_ORE
                 || block == ModBlocks.NETHER_TIN_ORE
-                || block == ModBlocks.END_TIN_ORE;
+                || block == ModBlocks.END_TIN_ORE
+                || block == ModBlocks.NETHER_COAL_ORE
+                || block == ModBlocks.END_COAL_ORE
+                || block == ModBlocks.NETHER_IRON_ORE
+                || block == ModBlocks.END_IRON_ORE
+                || block == ModBlocks.NETHER_COPPER_ORE
+                || block == ModBlocks.END_COPPER_ORE
+                || block == ModBlocks.END_GOLD_ORE
+                || block == ModBlocks.NETHER_REDSTONE_ORE
+                || block == ModBlocks.END_REDSTONE_ORE
+                || block == ModBlocks.NETHER_LAPISLAZULI_ORE
+                || block == ModBlocks.END_LAPISLAZULI_ORE
+                || block == ModBlocks.NETHER_DIAMOND_ORE
+                || block == ModBlocks.END_DIAMOND_ORE
+                || block == ModBlocks.NETHER_EMERALD_ORE
+                || block == ModBlocks.END_EMERALD_ORE;
     }
 }
