@@ -7,6 +7,7 @@ import com.cortez.adventuremod.command.BackCommand;
 import com.cortez.adventuremod.command.ReturnHomeCommand;
 import com.cortez.adventuremod.command.SetHomeCommand;
 import com.cortez.adventuremod.effect.ModEffects;
+import com.cortez.adventuremod.event.AxeWoodcutter;
 import com.cortez.adventuremod.event.ModPlayerEventCopyFrom;
 import com.cortez.adventuremod.event.PlayerTickHandler;
 import com.cortez.adventuremod.groups.ModGroups;
@@ -93,6 +94,7 @@ public class ModRegister
     private static void registerEvents() {
         ServerPlayerEvents.COPY_FROM.register(new ModPlayerEventCopyFrom());
         ServerTickEvents.START_SERVER_TICK.register(new PlayerTickHandler());
+        AxeWoodcutter.init();
     }
 
     private static void registerEffects(){

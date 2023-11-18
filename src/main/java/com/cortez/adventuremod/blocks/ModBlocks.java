@@ -58,9 +58,9 @@ public class ModBlocks
 
     public static final Block END_GOLD_ORE = registerBlock("end_gold_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).sounds(BlockSoundGroup.STONE).requiresTool()));
 
-    public static final Block NETHER_REDSTONE_ORE = registerBlock("nether_redstone_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.NETHER_GOLD_ORE).sounds(BlockSoundGroup.NETHER_ORE).requiresTool(), UniformIntProvider.create(0, 1)));
+    public static final Block NETHER_REDSTONE_ORE = registerBlock("nether_redstone_ore", new RedstoneOreBlock(FabricBlockSettings.copyOf(Blocks.NETHER_GOLD_ORE).sounds(BlockSoundGroup.NETHER_ORE).requiresTool().ticksRandomly().luminance(Blocks.createLightLevelFromLitBlockState(9))));
 
-    public static final Block END_REDSTONE_ORE = registerBlock("end_redstone_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).sounds(BlockSoundGroup.STONE).requiresTool()));
+    public static final Block END_REDSTONE_ORE = registerBlock("end_redstone_ore", new RedstoneOreBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).sounds(BlockSoundGroup.STONE).requiresTool().ticksRandomly().luminance(Blocks.createLightLevelFromLitBlockState(9))));
 
     public static final Block NETHER_LAPISLAZULI_ORE = registerBlock("nether_lapislazuli_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.NETHER_GOLD_ORE).sounds(BlockSoundGroup.NETHER_ORE).requiresTool(), UniformIntProvider.create(0, 1)));
 
