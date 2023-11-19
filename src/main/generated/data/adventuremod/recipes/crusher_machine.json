@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:deepslate"
+    },
+    "E": {
+      "item": "minecraft:iron_ingot"
+    },
+    "G": {
+      "item": "minecraft:iron_block"
+    }
+  },
+  "pattern": [
+    "###",
+    "#G#",
+    "EEE"
+  ],
+  "result": {
+    "item": "adventuremod:crusher_machine"
+  },
+  "show_notification": true
+}

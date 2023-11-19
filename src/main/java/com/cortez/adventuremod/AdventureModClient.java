@@ -28,5 +28,6 @@ public class AdventureModClient implements ClientModInitializer
 
         HandledScreens.register(ModScreenHandlers.CRUSHER_MACHINE_SCREEN_HANDLER, CrusherScreen::new);
         BlockEntityRendererFactories.register(ModBlockEntities.CRUSHER_MACHINE_BLOCK_ENTITY_BLOCK, CrusherMachineRenderer::new);
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CORN_CROP, RenderLayer.getCutout());
     }
 }

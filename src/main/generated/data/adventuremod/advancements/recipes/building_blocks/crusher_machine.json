@@ -1,0 +1,74 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_crusher_machine": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "adventuremod:crusher_machine"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_deepslate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:deepslate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_iron_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_block"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_iron_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:crusher_machine"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslate",
+      "has_iron_block",
+      "has_iron_ingot",
+      "has_crusher_machine"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:crusher_machine"
+    ]
+  },
+  "sends_telemetry_event": false
+}

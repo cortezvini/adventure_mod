@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "adventuremod:corn_cob"
+  },
+  "result": "adventuremod:roasted_corn",
+  "experience": 0,
+  "cookingtime": 100
+}

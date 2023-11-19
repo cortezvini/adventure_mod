@@ -1,6 +1,7 @@
 package com.cortez.adventuremod.items;
 
 import com.cortez.adventuremod.AdventureMod;
+import com.cortez.adventuremod.blocks.ModBlocks;
 import com.cortez.adventuremod.groups.ModGroups;
 import com.cortez.adventuremod.items.custom.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -112,6 +113,11 @@ public class ModItems
      */
     public static final Item BRONZE_BOOTS = registerItem("bronze_boots", new ArmorItem(ModArmorMaterials.BRONZE, ArmorItem.Type.BOOTS, new FabricItemSettings()));
 
+    public static final Item CORN_SEEDS = registerItem("corn_seeds", new AliasedBlockItem(ModBlocks.CORN_CROP, new FabricItemSettings()));
+
+    public static final Item CORN_COB = registerItem("corn_cob", new Item(new FabricItemSettings().food(ModFoodComponents.CORN_COB)));
+
+    public static final Item ROASTED_CORN = registerItem("roasted_corn", new Item(new FabricItemSettings().food(ModFoodComponents.ROASTED_CORN)));
 
     /**
      * Método para adicionar um item em um grupo de itens
@@ -145,6 +151,9 @@ public class ModItems
         entries.add(BRONZE_CHESTPLATE);
         entries.add(BRONZE_LEGGINGS);
         entries.add(BRONZE_BOOTS);
+        entries.add(CORN_SEEDS);
+        entries.add(CORN_COB);
+        entries.add(ROASTED_CORN);
     }
 
 

@@ -43,7 +43,9 @@ public class ModRecipeGenerator extends FabricRecipeProvider
         offerSmelting(exporter, List.of(ModItems.COPPER_DUST), RecipeCategory.MISC, Items.COPPER_INGOT, 0.5F, 200, "minecraft");
         offerBlasting(exporter, List.of(ModItems.COPPER_DUST), RecipeCategory.MISC, Items.COPPER_INGOT, 0.5F, 100, "adventuremod");
 
+        offerSmelting(exporter, List.of(ModItems.CORN_COB), RecipeCategory.FOOD, ModItems.ROASTED_CORN, 0.0F, 200, "adventuremod");
 
+        //CraftTable
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TIN_INGOT)
                 .pattern("###")
                 .pattern("###")
@@ -79,7 +81,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider
                 .criterion(FabricRecipeProvider.hasItem(ModItems.TIN_DUST), FabricRecipeProvider.conditionsFromItem(ModItems.TIN_DUST))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BRONZE_DUST)));
 
-        //Craft table
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LATEX_EXTRACTOR)
                 .pattern(" # ")
                 .pattern("###")
@@ -260,5 +262,27 @@ public class ModRecipeGenerator extends FabricRecipeProvider
                 .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE_BOOTS),
                         FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE_BOOTS))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BRONZE_BOOTS)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRUSHER_MACHINE)
+                .pattern("###")
+                .pattern("#G#")
+                .pattern("EEE")
+                .input('#', Blocks.DEEPSLATE)
+                .input('G', Blocks.IRON_BLOCK)
+                .input('E', Items.IRON_INGOT)
+                .criterion(FabricRecipeProvider.hasItem(Blocks.DEEPSLATE),
+                        FabricRecipeProvider.conditionsFromItem(Blocks.DEEPSLATE))
+                .criterion(FabricRecipeProvider.hasItem(Blocks.IRON_BLOCK),
+                        FabricRecipeProvider.conditionsFromItem(Blocks.IRON_BLOCK))
+                .criterion(FabricRecipeProvider.hasItem(Items.IRON_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(Items.IRON_INGOT))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.CRUSHER_MACHINE),
+                        FabricRecipeProvider.conditionsFromItem(ModBlocks.CRUSHER_MACHINE))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.CRUSHER_MACHINE)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CORN_SEEDS, 3)
+                .input(ModItems.CORN_COB)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.CORN_COB), FabricRecipeProvider.conditionsFromItem(ModItems.CORN_COB))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.CORN_SEEDS)));
     }
 }

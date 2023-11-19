@@ -1,9 +1,10 @@
-// 1.20.2	2023-11-18T22:16:31.6061419	Adventure Mod/Block Loot Tables
+// 1.20.2	2023-11-19T14:07:11.7969114	Adventure Mod/Block Loot Tables
 b3b7b26a5bbdf4153e1927fa6af1dc2e1d045f68 data\adventuremod\loot_tables\blocks\rubber_tree_log_latex.json
 90debb08acb5bed8483f1a46df80c10ea6dd6e77 data\adventuremod\loot_tables\blocks\nether_tin_ore.json
 461c076315ca0b7f4c3602f5ca35c74d2e13de2d data\adventuremod\loot_tables\blocks\end_gold_ore.json
 90debb08acb5bed8483f1a46df80c10ea6dd6e77 data\adventuremod\loot_tables\blocks\deepslate_tin_ore.json
 caf02ea750dc1b69c771869fc71d9f8a138bb190 data\adventuremod\loot_tables\blocks\rubber_tree_sapling.json
+da3f423f2d1b14ab68c5a513561fe5c9ae97b536 data\adventuremod\loot_tables\blocks\corn_crop.json
 d60e744062f5aad35ef5632e84026b9557990d13 data\adventuremod\loot_tables\blocks\nether_emerald_ore.json
 90debb08acb5bed8483f1a46df80c10ea6dd6e77 data\adventuremod\loot_tables\blocks\end_tin_ore.json
 2dc448a685685623283c379d55196187d77b4bd1 data\adventuremod\loot_tables\blocks\end_coal_ore.json

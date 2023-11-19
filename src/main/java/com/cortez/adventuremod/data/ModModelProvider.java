@@ -1,6 +1,7 @@
 package com.cortez.adventuremod.data;
 
 import com.cortez.adventuremod.blocks.ModBlocks;
+import com.cortez.adventuremod.blocks.custom.CornCropBlock;
 import com.cortez.adventuremod.items.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -54,6 +55,8 @@ public class ModModelProvider extends FabricModelProvider
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.NETHER_EMERALD_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_EMERALD_ORE);
         blockStateModelGenerator.registerSimpleState(ModBlocks.CRUSHER_MACHINE);
+
+        //blockStateModelGenerator.registerCrop(ModBlocks.CORN_CROP, CornCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7, 8);
     }
 
     // Gera modelos para itens
@@ -79,6 +82,9 @@ public class ModModelProvider extends FabricModelProvider
         itemModelGenerator.register(ModItems.BRONZE_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.BRONZE_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.BRONZE_HOE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.CORN_SEEDS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CORN_COB, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ROASTED_CORN, Models.GENERATED);
 
         itemModelGenerator.registerArmor((ArmorItem)ModItems.DIVINGSUIT_HELMET);
         itemModelGenerator.registerArmor((ArmorItem)ModItems.DIVINGSUIT_CHESTPLATE);

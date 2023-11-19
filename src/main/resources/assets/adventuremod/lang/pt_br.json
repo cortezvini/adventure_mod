@@ -28,7 +28,9 @@
   "item.adventuremod.bronze_chestplate": "Peitoral de Bronze",
   "item.adventuremod.bronze_leggings": "Calças de Bronze",
   "item.adventuremod.bronze_boots": "Botas de Bronze",
-
+  "item.adventuremod.corn_seeds": "Milho",
+  "item.adventuremod.corn_cob": "Espiga de Milho",
+  "item.adventuremod.roasted_corn": "Milho Assado",
   "itemgroup.adventuremod": "Adventure Mod",
 
   "effect.adventuremod.freeze": "Hipotermia",

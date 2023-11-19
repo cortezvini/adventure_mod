@@ -50,6 +50,8 @@ public class ModGroups {
                         entries.add(ModItems.BRONZE_CHESTPLATE);
                         entries.add(ModItems.BRONZE_LEGGINGS);
                         entries.add(ModItems.BRONZE_BOOTS);
+                        entries.add(ModItems.CORN_SEEDS);
+                        entries.add(ModItems.CORN_COB);
                         //Blocks
                         entries.add(ModBlocks.RUBBER_TREE_LEAVES);
                         entries.add(ModBlocks.RUBBER_TREE_LOG);
