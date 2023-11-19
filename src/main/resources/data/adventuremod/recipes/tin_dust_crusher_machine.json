@@ -1,0 +1,11 @@
+{
+  "type": "adventuremod:crusher_machine",
+  "ingredients": [
+    {
+      "item": "adventuremod:tin_ingot"
+    }
+  ],
+  "output": {
+    "item": "adventuremod:tin_dust"
+  }
+}

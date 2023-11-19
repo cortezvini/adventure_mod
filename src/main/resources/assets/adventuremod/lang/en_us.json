@@ -15,6 +15,19 @@
   "item.adventuremod.raw_tin": "Raw Tin",
   "item.adventuremod.tin_ingot": "Tin Ingot",
   "item.adventuremod.tin_nugget": "Tin Nugget",
+  "item.adventuremod.tin_dust": "Tin Dust",
+  "item.adventuremod.copper_dust": "Copper Dust",
+  "item.adventuremod.bronze_dust": "Bronze Dust",
+  "item.adventuremod.bronze_ingot": "Bronze Ingot",
+  "item.adventuremod.bronze_pickaxe": "Bronze Pickage",
+  "item.adventuremod.bronze_axe": "Bronze Axe",
+  "item.adventuremod.bronze_shovel": "Bronze Shovel",
+  "item.adventuremod.bronze_sword": "Bronze Sword",
+  "item.adventuremod.bronze_hoe": "Bronze Hoe",
+  "item.adventuremod.bronze_helmet": "Bronze Helmet",
+  "item.adventuremod.bronze_chestplate": "Bronze Chestplate",
+  "item.adventuremod.bronze_leggings": "Bronze Leggings",
+  "item.adventuremod.bronze_boots": "Bronze Boots",
 
   "itemgroup.adventuremod": "Adventure Mod",
 
@@ -59,6 +72,7 @@
   "block.adventuremod.end_diamond_ore": "End Diamond Ore",
   "block.adventuremod.nether_emerald_ore": "Nether Emerald Ore",
   "block.adventuremod.end_emerald_ore": "End Emerald Ore",
+  "block.adventuremod.crusher_machine": "Crusher Machine",
 
   "adventuremod.command.homeset": "Set home at %d",
   "adventuremod.command.returnhome.success": "You returned to your home!",

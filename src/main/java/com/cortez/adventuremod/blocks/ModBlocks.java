@@ -2,6 +2,7 @@ package com.cortez.adventuremod.blocks;
 
 
 import com.cortez.adventuremod.AdventureMod;
+import com.cortez.adventuremod.blocks.custom.CrusherMachineBlock;
 import com.cortez.adventuremod.blocks.custom.RubberTreeLog;
 import com.cortez.adventuremod.groups.ModGroups;
 import com.cortez.adventuremod.world.tree.RubberSaplingGenerator;
@@ -74,6 +75,8 @@ public class ModBlocks
     public static final Block NETHER_EMERALD_ORE = registerBlock("nether_emerald_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.NETHER_GOLD_ORE).sounds(BlockSoundGroup.NETHER_ORE).requiresTool(), UniformIntProvider.create(0, 1)));
 
     public static final Block END_EMERALD_ORE = registerBlock("end_emerald_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).sounds(BlockSoundGroup.STONE).requiresTool()));
+
+    public static final Block CRUSHER_MACHINE = registerBlock("crusher_machine", new CrusherMachineBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
 
     private static Block registerBlockWithoutItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, new Identifier(AdventureMod.MODID, name), block);

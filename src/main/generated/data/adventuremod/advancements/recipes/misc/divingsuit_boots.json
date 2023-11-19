@@ -34,9 +34,9 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_rubber",
-      "has_divingsuit_boots",
-      "has_the_recipe"
+      "has_divingsuit_boots"
     ]
   ],
   "rewards": {

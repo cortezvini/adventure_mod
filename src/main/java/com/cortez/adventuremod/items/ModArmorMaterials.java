@@ -4,12 +4,15 @@ import com.cortez.adventuremod.AdventureMod;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Lazy;
+import net.minecraft.util.Util;
 
+import java.util.EnumMap;
 import java.util.function.Supplier;
 
 
@@ -18,7 +21,10 @@ public enum ModArmorMaterials implements ArmorMaterial {
 
     // Define um novo tipo de material de armadura com as propriedades abaixo
     DIVINGSUIT("divingsuit", 5, new int[]{1, 2, 3, 1}, 15,
-    SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0f, 0.0f, () -> Ingredient.ofItems(Items.LEATHER));
+    SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0f, 0.0f, () -> Ingredient.ofItems(Items.LEATHER)),
+
+    BRONZE("bronze", 15, new int[]{3,5,6,3}, 9,  SoundEvents.ITEM_ARMOR_EQUIP_IRON,0.0F, 0.0F, ()-> Ingredient.ofItems(ModItems.BRONZE_INGOT));
+
 
     private final String name;
     private final int durabilityMultiplier;

@@ -33,9 +33,7 @@ public class ModLootTableModdifiers
                         // Define que o Loot Pool sempre vai dropar pelo menos 1 item
                         .rolls(ConstantLootNumberProvider.create(1))
                         // Define uma condição para o Loot Pool, que só permite o drop se o jogador matou o mob com uma mão vazia
-                        .conditionally(EntityPropertiesLootCondition.builder(LootContext.EntityTarget.KILLER,
-                                new EntityPredicate.Builder().equipment(EntityEquipmentPredicate.Builder.create()
-                                        .mainhand(ItemPredicate.Builder.create().build()).build()).build()))
+                        .conditionally(RandomChanceLootCondition.builder(1f))
                         // Adiciona o item de drop do Wither Skeleton ao Loot Pool
                         .with(ItemEntry.builder(ModItems.WITHERINGPOWDER))
                         // Define uma condição de chance aleatória para o item de drop, que tem 80% de chance de dropar
@@ -48,14 +46,13 @@ public class ModLootTableModdifiers
 
             // Verifica se o Loot Table é do Shulker
             if(SHULKER.equals(id)) {
+
                 // Cria um novo Loot Pool para o Shulker
                 LootPool.Builder poolBuilder = LootPool.builder()
                         // Define que o Loot Pool sempre vai dropar pelo menos 1 item
                         .rolls(ConstantLootNumberProvider.create(1))
                         // Define uma condição para o Loot Pool, que só permite o drop se o jogador matou o mob com uma mão vazia
-                        .conditionally(EntityPropertiesLootCondition.builder(LootContext.EntityTarget.KILLER,
-                                new EntityPredicate.Builder().equipment(EntityEquipmentPredicate.Builder.create()
-                                        .mainhand(ItemPredicate.Builder.create().build()).build()).build()))
+                        .conditionally(RandomChanceLootCondition.builder(1f))
                         // Adiciona o item de drop do Wither Skeleton ao Loot Pool
                         .with(ItemEntry.builder(ModItems.LEVITATIONPOWDER))
                         // Define uma condição de chance aleatória para o item de drop, que tem 80% de chance de dropar

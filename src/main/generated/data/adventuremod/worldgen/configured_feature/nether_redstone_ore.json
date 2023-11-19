@@ -6,7 +6,10 @@
     "targets": [
       {
         "state": {
-          "Name": "adventuremod:nether_redstone_ore"
+          "Name": "adventuremod:nether_redstone_ore",
+          "Properties": {
+            "lit": "false"
+          }
         },
         "target": {
           "predicate_type": "minecraft:tag_match",

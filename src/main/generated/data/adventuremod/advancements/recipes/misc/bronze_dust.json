@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_copper_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "adventuremod:copper_dust"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:bronze_dust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tin_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "adventuremod:tin_dust"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_copper_dust",
+      "has_tin_dust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:bronze_dust"
+    ]
+  },
+  "sends_telemetry_event": false
+}

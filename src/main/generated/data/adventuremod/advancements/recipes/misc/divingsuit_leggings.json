@@ -46,10 +46,10 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_rubber",
       "has_orange_dye",
-      "has_divingsuit_leggings",
-      "has_the_recipe"
+      "has_divingsuit_leggings"
     ]
   ],
   "rewards": {

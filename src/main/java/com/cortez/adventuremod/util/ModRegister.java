@@ -3,6 +3,7 @@ package com.cortez.adventuremod.util;
 import com.cortez.adventuremod.AdventureMod;
 import com.cortez.adventuremod.blocks.ModBlocks;
 import com.cortez.adventuremod.blocks.ModFlammableBlockRegistry;
+import com.cortez.adventuremod.blocks.entity.ModBlockEntities;
 import com.cortez.adventuremod.command.BackCommand;
 import com.cortez.adventuremod.command.ReturnHomeCommand;
 import com.cortez.adventuremod.command.SetHomeCommand;
@@ -13,6 +14,8 @@ import com.cortez.adventuremod.event.PlayerTickHandler;
 import com.cortez.adventuremod.groups.ModGroups;
 import com.cortez.adventuremod.items.ModItems;
 import com.cortez.adventuremod.potions.ModPotions;
+import com.cortez.adventuremod.recipe.ModRecipes;
+import com.cortez.adventuremod.screen.ModScreenHandlers;
 import com.cortez.adventuremod.world.gen.ModWorldGeneration;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
@@ -35,7 +38,12 @@ public class ModRegister
         regiterWorldGen();
         registerCommands();
         registerEvents();
+        registerBlocksEntity();
+        registerScreen();
+        registerRecipe();
     }
+
+
 
     /**
      * Registra os grupos do mod.
@@ -99,5 +107,18 @@ public class ModRegister
 
     private static void registerEffects(){
         ModEffects.registerEffects();
+    }
+
+    private static void registerBlocksEntity() {
+        ModBlockEntities.registerBlockEntities();
+    }
+
+    private static void registerScreen(){
+        ModScreenHandlers.registerScreenHandlers();
+    }
+
+    private static void registerRecipe()
+    {
+        ModRecipes.registerRecipes();
     }
 }

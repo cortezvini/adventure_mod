@@ -15,6 +15,19 @@
   "item.adventuremod.raw_tin": "Estanho Bruto",
   "item.adventuremod.tin_ingot": "Barra de Estanho",
   "item.adventuremod.tin_nugget": "Pepita de Estanho",
+  "item.adventuremod.tin_dust": "Pó de Estanho",
+  "item.adventuremod.copper_dust": "Pó de Cobre",
+  "item.adventuremod.bronze_dust": "Pó de Bronze",
+  "item.adventuremod.bronze_ingot": "Barra de Bronze",
+  "item.adventuremod.bronze_pickaxe": "Picareta de Bronze",
+  "item.adventuremod.bronze_axe": "Machado de Bronze",
+  "item.adventuremod.bronze_shovel": "Pá Bronze",
+  "item.adventuremod.bronze_sword": "Espada de Bronze",
+  "item.adventuremod.bronze_hoe": "Enxada de Bronze",
+  "item.adventuremod.bronze_helmet": "Capacete de Bronze",
+  "item.adventuremod.bronze_chestplate": "Peitoral de Bronze",
+  "item.adventuremod.bronze_leggings": "Calças de Bronze",
+  "item.adventuremod.bronze_boots": "Botas de Bronze",
 
   "itemgroup.adventuremod": "Adventure Mod",
 
@@ -59,6 +72,7 @@
   "block.adventuremod.end_diamond_ore": "Minério de Diamante do Fim",
   "block.adventuremod.nether_emerald_ore": "Minério de Esmeralda do Nether",
   "block.adventuremod.end_emerald_ore": "Minério de Esmeralda do Fim",
+  "block.adventuremod.crusher_machine": "Triturador",
 
   "adventuremod.command.homeset": "Casa definida em %d",
   "adventuremod.command.returnhome.success": "Você retornou para sua casa!",

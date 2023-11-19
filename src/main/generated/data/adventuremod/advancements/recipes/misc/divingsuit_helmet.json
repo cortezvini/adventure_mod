@@ -58,11 +58,11 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_rubber",
       "has_glass_pane",
       "has_orange_dye",
-      "has_divingsuit_helmet",
-      "has_the_recipe"
+      "has_divingsuit_helmet"
     ]
   ],
   "rewards": {

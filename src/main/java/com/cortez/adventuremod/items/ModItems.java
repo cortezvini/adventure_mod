@@ -81,6 +81,38 @@ public class ModItems
 
     public static final Item TIN_NUGGET = registerItem("tin_nugget", new Item(new FabricItemSettings()));
 
+    public static final Item TIN_DUST = registerItem("tin_dust", new Item(new FabricItemSettings()));
+
+    public static final Item COPPER_DUST = registerItem("copper_dust", new Item(new FabricItemSettings()));
+
+    public static final Item BRONZE_DUST = registerItem("bronze_dust", new Item(new FabricItemSettings()));
+
+    public static final Item BRONZE_INGOT = registerItem("bronze_ingot", new Item(new FabricItemSettings()));
+
+    public static final Item BRONZE_PICKAXE = registerItem("bronze_pickaxe",
+            new PickaxeItem(ModToolMaterial.BRONZE, 1, -2.8f, new FabricItemSettings()));
+    public static final Item BRONZE_AXE = registerItem("bronze_axe",
+            new AxeItem(ModToolMaterial.BRONZE, 7, -3.1f, new FabricItemSettings()));
+    public static final Item BRONZE_SHOVEL = registerItem("bronze_shovel",
+            new ShovelItem(ModToolMaterial.BRONZE, 4, -2.6F, new FabricItemSettings()));
+    public static final Item BRONZE_SWORD = registerItem("bronze_sword",
+            new SwordItem(ModToolMaterial.BRONZE, 3, -2.3f, new FabricItemSettings()));
+    public static final Item BRONZE_HOE = registerItem("bronze_hoe",
+            new HoeItem(ModToolMaterial.BRONZE, -2, -1.0F, new FabricItemSettings()));
+
+    public static final Item BRONZE_HELMET = registerItem("bronze_helmet", new ArmorItem(ModArmorMaterials.BRONZE, ArmorItem.Type.HELMET, new FabricItemSettings()));
+
+    public static final Item BRONZE_CHESTPLATE = registerItem("bronze_chestplate", new ArmorItem(ModArmorMaterials.BRONZE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+    /**
+     *  Criação de um item "DIVINGSUIT_LEGGINGS"
+     */
+    public static final Item BRONZE_LEGGINGS = registerItem("bronze_leggings", new ArmorItem(ModArmorMaterials.BRONZE, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
+    /**
+     *  Criação de um item "DIVINGSUIT_BOOTS"
+     */
+    public static final Item BRONZE_BOOTS = registerItem("bronze_boots", new ArmorItem(ModArmorMaterials.BRONZE, ArmorItem.Type.BOOTS, new FabricItemSettings()));
+
+
     /**
      * Método para adicionar um item em um grupo de itens
      */
@@ -100,6 +132,19 @@ public class ModItems
         entries.add(RAW_TIN);
         entries.add(TIN_INGOT);
         entries.add(TIN_NUGGET);
+        entries.add(TIN_DUST);
+        entries.add(COPPER_DUST);
+        entries.add(BRONZE_DUST);
+        entries.add(BRONZE_INGOT);
+        entries.add(BRONZE_PICKAXE);
+        entries.add(BRONZE_AXE);
+        entries.add(BRONZE_SHOVEL);
+        entries.add(BRONZE_SWORD);
+        entries.add(BRONZE_HOE);
+        entries.add(BRONZE_HELMET);
+        entries.add(BRONZE_CHESTPLATE);
+        entries.add(BRONZE_LEGGINGS);
+        entries.add(BRONZE_BOOTS);
     }
 
 

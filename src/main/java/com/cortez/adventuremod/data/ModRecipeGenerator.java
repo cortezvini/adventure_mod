@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
@@ -29,12 +30,18 @@ public class ModRecipeGenerator extends FabricRecipeProvider
 
     // Método responsável pela geração das receitas
     @Override
-    public void generate(Consumer<RecipeJsonProvider> exporter) {
+    public void generate(RecipeExporter exporter) {
         //Fornalha
         offerSmelting(exporter, List.of(ModItems.LATEX), RecipeCategory.MISC, ModItems.RUBBER, 0.0F, 200, "adventuremod");
         offerSmelting(exporter, List.of(ModBlocks.RUBBER_TREE_LOG), RecipeCategory.MISC, Blocks.OAK_LOG, 0.0F, 200, "adventuremod");
-        offerSmelting(exporter, List.of(ModItems.RAW_TIN), RecipeCategory.MISC, ModItems.TIN_INGOT, 0.0F, 200, "adventuremod");
-        offerBlasting(exporter, List.of(ModItems.RAW_TIN), RecipeCategory.MISC, ModItems.TIN_INGOT, 0.0F, 100, "adventuremod");
+        offerSmelting(exporter, List.of(ModItems.RAW_TIN), RecipeCategory.MISC, ModItems.TIN_INGOT, 0.5F, 200, "adventuremod");
+        offerBlasting(exporter, List.of(ModItems.RAW_TIN), RecipeCategory.MISC, ModItems.TIN_INGOT, 0.5F, 100, "adventuremod");
+        offerSmelting(exporter, List.of(ModItems.BRONZE_DUST), RecipeCategory.MISC, ModItems.BRONZE_INGOT, 0.5F, 200, "adventuremod");
+        offerBlasting(exporter, List.of(ModItems.BRONZE_DUST), RecipeCategory.MISC, ModItems.BRONZE_INGOT, 0.5F, 100, "adventuremod");
+        offerSmelting(exporter, List.of(ModItems.TIN_DUST), RecipeCategory.MISC, ModItems.TIN_INGOT, 0.5F, 200, "adventuremod");
+        offerBlasting(exporter, List.of(ModItems.TIN_DUST), RecipeCategory.MISC, ModItems.TIN_INGOT, 0.5F, 100, "adventuremod");
+        offerSmelting(exporter, List.of(ModItems.COPPER_DUST), RecipeCategory.MISC, Items.COPPER_INGOT, 0.5F, 200, "minecraft");
+        offerBlasting(exporter, List.of(ModItems.COPPER_DUST), RecipeCategory.MISC, Items.COPPER_INGOT, 0.5F, 100, "adventuremod");
 
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TIN_INGOT)
@@ -62,6 +69,15 @@ public class ModRecipeGenerator extends FabricRecipeProvider
                 .input(ModBlocks.TIN_BLOCK)
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.TIN_BLOCK), FabricRecipeProvider.conditionsFromItem(ModBlocks.TIN_BLOCK))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.TIN_INGOT) + "_block"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BRONZE_DUST, 2)
+                .input(ModItems.COPPER_DUST)
+                .input(ModItems.COPPER_DUST)
+                .input(ModItems.COPPER_DUST)
+                .input(ModItems.TIN_DUST)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.COPPER_DUST), FabricRecipeProvider.conditionsFromItem(ModItems.COPPER_DUST))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.TIN_DUST), FabricRecipeProvider.conditionsFromItem(ModItems.TIN_DUST))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BRONZE_DUST)));
 
         //Craft table
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LATEX_EXTRACTOR)
@@ -131,6 +147,118 @@ public class ModRecipeGenerator extends FabricRecipeProvider
                         FabricRecipeProvider.conditionsFromItem(ModItems.DIVINGSUIT_BOOTS))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.DIVINGSUIT_BOOTS)));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.BRONZE_PICKAXE)
+                .pattern("###")
+                .pattern(" A ")
+                .pattern(" A ")
+                .input('#', ModItems.BRONZE_INGOT)
+                .input('A', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE_INGOT))
+                .criterion(FabricRecipeProvider.hasItem(Items.STICK),
+                        FabricRecipeProvider.conditionsFromItem(Items.STICK))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE_PICKAXE),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE_PICKAXE))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BRONZE_PICKAXE)));
 
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.BRONZE_AXE)
+                .pattern("## ")
+                .pattern("#A ")
+                .pattern(" A ")
+                .input('#', ModItems.BRONZE_INGOT)
+                .input('A', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE_INGOT))
+                .criterion(FabricRecipeProvider.hasItem(Items.STICK),
+                        FabricRecipeProvider.conditionsFromItem(Items.STICK))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE_AXE),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE_AXE))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BRONZE_AXE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.BRONZE_SHOVEL)
+                .pattern(" # ")
+                .pattern(" A ")
+                .pattern(" A ")
+                .input('#', ModItems.BRONZE_INGOT)
+                .input('A', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE_INGOT))
+                .criterion(FabricRecipeProvider.hasItem(Items.STICK),
+                        FabricRecipeProvider.conditionsFromItem(Items.STICK))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE_SHOVEL),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE_SHOVEL))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BRONZE_SHOVEL)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.BRONZE_SWORD)
+                .pattern(" # ")
+                .pattern(" # ")
+                .pattern(" A ")
+                .input('#', ModItems.BRONZE_INGOT)
+                .input('A', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE_INGOT))
+                .criterion(FabricRecipeProvider.hasItem(Items.STICK),
+                        FabricRecipeProvider.conditionsFromItem(Items.STICK))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE_SWORD),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE_SWORD))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BRONZE_SWORD)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.BRONZE_HOE)
+                .pattern("## ")
+                .pattern(" A ")
+                .pattern(" A ")
+                .input('#', ModItems.BRONZE_INGOT)
+                .input('A', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE_INGOT))
+                .criterion(FabricRecipeProvider.hasItem(Items.STICK),
+                        FabricRecipeProvider.conditionsFromItem(Items.STICK))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE_HOE),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE_HOE))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BRONZE_HOE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BRONZE_HELMET)
+                .pattern("###")
+                .pattern("# #")
+                .input('#', ModItems.BRONZE_INGOT)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE_INGOT))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE_HELMET),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE_HELMET))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BRONZE_HELMET)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BRONZE_CHESTPLATE)
+                .pattern("# #")
+                .pattern("###")
+                .pattern("###")
+                .input('#', ModItems.BRONZE_INGOT)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE_INGOT))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE_CHESTPLATE),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE_CHESTPLATE))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BRONZE_CHESTPLATE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BRONZE_LEGGINGS)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("# #")
+                .input('#', ModItems.BRONZE_INGOT)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE_INGOT))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE_LEGGINGS),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE_LEGGINGS))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BRONZE_LEGGINGS)));
+
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BRONZE_BOOTS)
+                .pattern("# #")
+                .pattern("# #")
+                .input('#', ModItems.BRONZE_INGOT)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE_INGOT))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE_BOOTS),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE_BOOTS))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BRONZE_BOOTS)));
     }
 }

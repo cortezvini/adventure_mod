@@ -6,7 +6,10 @@
     "targets": [
       {
         "state": {
-          "Name": "adventuremod:end_redstone_ore"
+          "Name": "adventuremod:end_redstone_ore",
+          "Properties": {
+            "lit": "false"
+          }
         },
         "target": {
           "block": "minecraft:end_stone",

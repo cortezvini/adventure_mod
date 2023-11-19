@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "adventuremod:copper_dust"
+    },
+    {
+      "item": "adventuremod:copper_dust"
+    },
+    {
+      "item": "adventuremod:copper_dust"
+    },
+    {
+      "item": "adventuremod:tin_dust"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "adventuremod:bronze_dust"
+  }
+}

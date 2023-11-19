@@ -53,6 +53,7 @@ public class ModModelProvider extends FabricModelProvider
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_DIAMOND_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.NETHER_EMERALD_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_EMERALD_ORE);
+        blockStateModelGenerator.registerSimpleState(ModBlocks.CRUSHER_MACHINE);
     }
 
     // Gera modelos para itens
@@ -69,10 +70,24 @@ public class ModModelProvider extends FabricModelProvider
         itemModelGenerator.register(ModItems.RAW_TIN, Models.GENERATED);
         itemModelGenerator.register(ModItems.TIN_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.TIN_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TIN_DUST, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COPPER_DUST, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BRONZE_DUST, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BRONZE_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BRONZE_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.BRONZE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.BRONZE_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.BRONZE_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.BRONZE_HOE, Models.HANDHELD);
 
         itemModelGenerator.registerArmor((ArmorItem)ModItems.DIVINGSUIT_HELMET);
         itemModelGenerator.registerArmor((ArmorItem)ModItems.DIVINGSUIT_CHESTPLATE);
         itemModelGenerator.registerArmor((ArmorItem)ModItems.DIVINGSUIT_LEGGINGS);
         itemModelGenerator.registerArmor((ArmorItem)ModItems.DIVINGSUIT_BOOTS);
+
+        itemModelGenerator.registerArmor((ArmorItem)ModItems.BRONZE_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem)ModItems.BRONZE_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem)ModItems.BRONZE_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem)ModItems.BRONZE_BOOTS);
     }
 }

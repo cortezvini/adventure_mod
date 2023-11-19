@@ -37,6 +37,19 @@ public class ModGroups {
                         entries.add(ModItems.RAW_TIN);
                         entries.add(ModItems.TIN_INGOT);
                         entries.add(ModItems.TIN_NUGGET);
+                        entries.add(ModItems.TIN_DUST);
+                        entries.add(ModItems.COPPER_DUST);
+                        entries.add(ModItems.BRONZE_DUST);
+                        entries.add(ModItems.BRONZE_INGOT);
+                        entries.add(ModItems.BRONZE_PICKAXE);
+                        entries.add(ModItems.BRONZE_AXE);
+                        entries.add(ModItems.BRONZE_SHOVEL);
+                        entries.add(ModItems.BRONZE_SWORD);
+                        entries.add(ModItems.BRONZE_HOE);
+                        entries.add(ModItems.BRONZE_HELMET);
+                        entries.add(ModItems.BRONZE_CHESTPLATE);
+                        entries.add(ModItems.BRONZE_LEGGINGS);
+                        entries.add(ModItems.BRONZE_BOOTS);
                         //Blocks
                         entries.add(ModBlocks.RUBBER_TREE_LEAVES);
                         entries.add(ModBlocks.RUBBER_TREE_LOG);
@@ -62,6 +75,8 @@ public class ModGroups {
                         entries.add(ModBlocks.END_DIAMOND_ORE);
                         entries.add(ModBlocks.NETHER_EMERALD_ORE);
                         entries.add(ModBlocks.END_EMERALD_ORE);
+                        entries.add(ModBlocks.CRUSHER_MACHINE);
+
                     }).build());
 
 

@@ -1,0 +1,61 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bronze_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "adventuremod:bronze_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_bronze_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "adventuremod:bronze_shovel"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_stick": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:stick"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:bronze_shovel"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bronze_ingot",
+      "has_stick",
+      "has_bronze_shovel"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:bronze_shovel"
+    ]
+  },
+  "sends_telemetry_event": false
+}

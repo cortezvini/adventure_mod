@@ -34,9 +34,9 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_oak_planks",
-      "has_latex_extractor",
-      "has_the_recipe"
+      "has_latex_extractor"
     ]
   ],
   "rewards": {
