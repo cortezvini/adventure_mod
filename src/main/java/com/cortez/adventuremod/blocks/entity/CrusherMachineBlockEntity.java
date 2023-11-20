@@ -1,12 +1,10 @@
 package com.cortez.adventuremod.blocks.entity;
 
-import com.cortez.adventuremod.items.ModItems;
-import com.cortez.adventuremod.recipe.CrasherRecipe;
+import com.cortez.adventuremod.recipe.CrusherRecipe;
 import com.cortez.adventuremod.screen.CrusherMachineScreenHandler;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
@@ -18,7 +16,6 @@ import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.RecipeEntry;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
-import net.minecraft.screen.ScreenHandlerFactory;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
@@ -142,7 +139,7 @@ public class CrusherMachineBlockEntity  extends BlockEntity implements ExtendedS
     }
 
     private void craftItem() {
-        Optional<RecipeEntry<CrasherRecipe>> recipe = getCurrentRecipe();
+        Optional<RecipeEntry<CrusherRecipe>> recipe = getCurrentRecipe();
 
         this.removeStack(INPUT_SLOT, 1);
 
@@ -160,18 +157,18 @@ public class CrusherMachineBlockEntity  extends BlockEntity implements ExtendedS
     }
 
     private boolean hasRecipe() {
-        Optional<RecipeEntry<CrasherRecipe>> recipe = getCurrentRecipe();
+        Optional<RecipeEntry<CrusherRecipe>> recipe = getCurrentRecipe();
 
         return recipe.isPresent() && canInsertAmountIntoOutputSlot(recipe.get().value().getResult(null))
                 && canInsertItemIntoOutputSlot(recipe.get().value().getResult(null).getItem());
     }
-    private Optional<RecipeEntry<CrasherRecipe>> getCurrentRecipe() {
+    private Optional<RecipeEntry<CrusherRecipe>> getCurrentRecipe() {
         SimpleInventory inv = new SimpleInventory(this.size());
         for(int i = 0; i < this.size(); i++) {
             inv.setStack(i, this.getStack(i));
         }
 
-        return getWorld().getRecipeManager().getFirstMatch(CrasherRecipe.Type.INSTANCE, inv, getWorld());
+        return getWorld().getRecipeManager().getFirstMatch(CrusherRecipe.Type.INSTANCE, inv, getWorld());
     }
 
 

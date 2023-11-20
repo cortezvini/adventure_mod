@@ -14,12 +14,12 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class CrasherRecipe implements Recipe<SimpleInventory> {
+public class CrusherRecipe implements Recipe<SimpleInventory> {
 
     private final ItemStack output;
     private final List<Ingredient> recipeItems;
 
-    public CrasherRecipe(List<Ingredient> ingredients, ItemStack itemStack) {
+    public CrusherRecipe(List<Ingredient> ingredients, ItemStack itemStack) {
         this.output = itemStack;
         this.recipeItems = ingredients;
     }
@@ -65,19 +65,19 @@ public class CrasherRecipe implements Recipe<SimpleInventory> {
         return Type.INSTANCE;
     }
 
-    public static class Type implements RecipeType<CrasherRecipe> {
+    public static class Type implements RecipeType<CrusherRecipe> {
         public static final Type INSTANCE = new Type();
         public static final String ID = "crusher_machine";
     }
 
-    public static class Serializer implements RecipeSerializer<CrasherRecipe> {
+    public static class Serializer implements RecipeSerializer<CrusherRecipe> {
         public static final Serializer INSTANCE = new Serializer();
         public static final String ID = "crusher_machine";
 
-        public static final Codec<CrasherRecipe> CODEC = RecordCodecBuilder.create(in -> in.group(
-                validateAmount(Ingredient.DISALLOW_EMPTY_CODEC, 9).fieldOf("ingredients").forGetter(CrasherRecipe::getIngredients),
+        public static final Codec<CrusherRecipe> CODEC = RecordCodecBuilder.create(in -> in.group(
+                validateAmount(Ingredient.DISALLOW_EMPTY_CODEC, 9).fieldOf("ingredients").forGetter(CrusherRecipe::getIngredients),
                 RecipeCodecs.CRAFTING_RESULT.fieldOf("output").forGetter(r -> r.output)
-        ).apply(in, CrasherRecipe::new));
+        ).apply(in, CrusherRecipe::new));
 
         private static Codec<List<Ingredient>> validateAmount(Codec<Ingredient> delegate, int max) {
             return Codecs.validate(Codecs.validate(
@@ -86,12 +86,12 @@ public class CrasherRecipe implements Recipe<SimpleInventory> {
         }
 
         @Override
-        public Codec<CrasherRecipe> codec() {
+        public Codec<CrusherRecipe> codec() {
             return CODEC;
         }
 
         @Override
-        public CrasherRecipe read(PacketByteBuf buf) {
+        public CrusherRecipe read(PacketByteBuf buf) {
             DefaultedList<Ingredient> inputs = DefaultedList.ofSize(buf.readInt(), Ingredient.EMPTY);
 
             for(int i = 0; i < inputs.size(); i++) {
@@ -99,11 +99,11 @@ public class CrasherRecipe implements Recipe<SimpleInventory> {
             }
 
             ItemStack output = buf.readItemStack();
-            return new CrasherRecipe(inputs, output);
+            return new CrusherRecipe(inputs, output);
         }
 
         @Override
-        public void write(PacketByteBuf buf, CrasherRecipe recipe) {
+        public void write(PacketByteBuf buf, CrusherRecipe recipe) {
             buf.writeInt(recipe.getIngredients().size());
 
             for (Ingredient ingredient : recipe.getIngredients()) {
