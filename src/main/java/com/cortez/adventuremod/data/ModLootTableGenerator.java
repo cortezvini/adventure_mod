@@ -5,6 +5,7 @@ import com.cortez.adventuremod.blocks.custom.CornCropBlock;
 import com.cortez.adventuremod.items.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.Items;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.AnyOfLootCondition;
@@ -48,6 +49,7 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider
         addDrop(ModBlocks.END_DIAMOND_ORE, Items.DIAMOND);
         addDrop(ModBlocks.NETHER_EMERALD_ORE, Items.EMERALD);
         addDrop(ModBlocks.END_EMERALD_ORE, Items.EMERALD);
+        addDrop(Blocks.SPAWNER);
 
         /*AnyOfLootCondition.Builder builder2 =
                 BlockStatePropertyLootCondition.builder(ModBlocks.CORN_CROP).properties(StatePredicate.Builder.create()

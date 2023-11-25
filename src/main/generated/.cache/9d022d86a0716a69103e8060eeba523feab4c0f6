@@ -1,4 +1,4 @@
-// 1.20.2	2023-11-19T14:07:11.794909	Adventure Mod/Recipes
+// 1.20.2	2023-11-20T10:27:15.9867235	Adventure Mod/Recipes
 9e3095cb1986bb77de045ce56bd41393ef774dcd data\adventuremod\advancements\recipes\tools\bronze_sword.json
 b3c1e1653144150b638f6f0aad6e273fc3545b1c data\adventuremod\recipes\copper_ingot_from_smelting_copper_dust.json
 eaa200a931b51e0bb3dae3ba59e3087cd8cb39ac data\adventuremod\recipes\tin_nugget.json
@@ -10,10 +10,12 @@ e44a986bcd27f8715bdc19a7b1151646fe48c1e7 data\adventuremod\recipes\crusher_machi
 d4c69b251c9f5792f3210d8fd6ba52a6cdf60a0e data\adventuremod\recipes\bronze_ingot_from_blasting_bronze_dust.json
 dfc88bf9e256ea32fcc6dc3b35a3c5bb2e89a9a2 data\adventuremod\advancements\recipes\misc\tin_nugget.json
 340266f394ad54868777b2317e177039156a7b2d data\adventuremod\advancements\recipes\misc\tin_ingot_from_smelting_tin_dust.json
+5197d73668a2c37564359e863d012b38534c8516 data\adventuremod\advancements\recipes\building_blocks\spawner.json
 c75fb1da8ba1f0fff97b89e7a5e26ca5a475e87c data\adventuremod\recipes\corn_seeds.json
 8da83d2c4eb376741df864c7557a33393659d505 data\adventuremod\advancements\recipes\tools\bronze_axe.json
 28c5c5f9021b35aaaa46019c6ab98eb9fe1462ba data\adventuremod\advancements\recipes\misc\copper_ingot_from_smelting_copper_dust.json
 7967d4c8fe4f0bae559ef8820115970e7e08dc5c data\adventuremod\recipes\divingsuit_boots.json
+f8917fecb50938fef97fdb4450a3689cfa44d156 data\adventuremod\recipes\spawner.json
 e060900f5fff055e6f52f02521625b936d16fb14 data\adventuremod\advancements\recipes\misc\copper_ingot_from_blasting_copper_dust.json
 1b2370a6b509f3301052848da24e5823696f81a4 data\adventuremod\advancements\recipes\misc\divingsuit_helmet.json
 5dfd94db64cc80967b994c31a198b240e2f70dbc data\adventuremod\recipes\bronze_chestplate.json

@@ -1,4 +1,4 @@
-// 1.20.2	2023-11-19T14:07:11.7879059	Adventure Mod/Model Definitions
+// 1.20.2	2023-11-20T10:27:15.9797256	Adventure Mod/Model Definitions
 5f0b3fb7de6e362a76f87fc7e97163e6d8459fc0 assets\adventuremod\models\item\divingsuit_helmet_redstone_trim.json
 bdd26e859e0d18f55b39982a0d1208deed556415 assets\adventuremod\models\block\tin_block.json
 d6dc52be38cee6ef2208a8f757bbed0da83acbac assets\adventuremod\models\item\bronze_helmet_lapis_trim.json
@@ -57,8 +57,8 @@ d838f1f578c57382d04ef9aa5ab09b76547d48af assets\adventuremod\models\block\end_ti
 26e748cf423e8ef2f9ed9396c73d206eb23369e9 assets\adventuremod\blockstates\end_redstone_ore.json
 e46c74cbcc6ed330dc65eeba305c0a9299eaa9cf assets\adventuremod\models\block\end_redstone_ore.json
 10e51bee4e699fda614efe440256442981d17d70 assets\adventuremod\models\block\nether_tin_ore.json
-ded1495b2c027e78a912be54f896ce4d33dbaaca assets\adventuremod\blockstates\end_coal_ore.json
 92cf7ea975ee93de3607f7a04a514b27017171bb assets\adventuremod\models\item\divingsuit_chestplate_netherite_trim.json
+ded1495b2c027e78a912be54f896ce4d33dbaaca assets\adventuremod\blockstates\end_coal_ore.json
 a6faced2880a54c9bc94cf6a46753a7eeed11fc6 assets\adventuremod\models\block\nether_iron_ore.json
 5febf30730392e2b1c688fc99b8f3f46ec8e99a9 assets\adventuremod\models\item\tin_dust.json
 bdbfa3b5b143321ccf1aa4582c15b537c7003921 assets\adventuremod\models\item\divingsuit_leggings.json

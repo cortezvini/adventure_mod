@@ -1,4 +1,4 @@
-// 1.20.2	2023-11-19T14:07:11.7839069	Adventure Mod/adventuremod
+// 1.20.2	2023-11-20T10:27:15.9757274	Adventure Mod/adventuremod
 5a7cbe11ab54d56c34312571df266a7d3a5de164 data\adventuremod\worldgen\placed_feature\end_copper_ore_placed.json
 bf103c0a01c4065ec96450482e2178e4f27c24fe data\adventuremod\worldgen\configured_feature\end_coal_ore.json
 2d318b6b5c24ccb8e50442c4b054439e02b4b2b6 data\adventuremod\worldgen\placed_feature\tin_ore_placed.json
@@ -17,8 +17,8 @@ e51cae9f6322193c0606a194e0cf0d8a4473c02e data\adventuremod\worldgen\placed_featu
 6191a84db9e9fffdf6f562e93836b9ddc5f3773d data\adventuremod\worldgen\placed_feature\nether_coal_ore_placed.json
 786f09b2aadc680f9300aa6e0ecfebd5ffe1f4af data\adventuremod\worldgen\placed_feature\end_emerald_ore_placed.json
 57d66fc90f36ad020813cec658ef96cfb42fe1fe data\adventuremod\worldgen\configured_feature\tin_ore.json
-77f980798cac8922ac6d8ad8722933ab4eb65c76 data\adventuremod\worldgen\placed_feature\nether_copper_ore_placed.json
 59c7c91b67f27e8865080fc6d39f30cbb8b72e7e data\adventuremod\worldgen\placed_feature\rubber_tree_placed.json
+77f980798cac8922ac6d8ad8722933ab4eb65c76 data\adventuremod\worldgen\placed_feature\nether_copper_ore_placed.json
 f82907e44e3edce2b7062e507d444c508586a215 data\adventuremod\worldgen\configured_feature\end_diamond_ore.json
 d02d8d3c2b1eaa56971507b873f3a582f7276f3b data\adventuremod\worldgen\placed_feature\end_lapislazuli_ore_placed.json
 a5e7c82ba5d75b4db91f5522607c6b6fbdab02f9 data\adventuremod\worldgen\configured_feature\end_copper_ore.json

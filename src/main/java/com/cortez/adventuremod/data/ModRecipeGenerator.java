@@ -284,5 +284,16 @@ public class ModRecipeGenerator extends FabricRecipeProvider
                 .input(ModItems.CORN_COB)
                 .criterion(FabricRecipeProvider.hasItem(ModItems.CORN_COB), FabricRecipeProvider.conditionsFromItem(ModItems.CORN_COB))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.CORN_SEEDS)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.SPAWNER)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .input('#', Blocks.IRON_BARS)
+                .criterion(FabricRecipeProvider.hasItem(Blocks.IRON_BARS),
+                        FabricRecipeProvider.conditionsFromItem(Blocks.IRON_BARS))
+                .criterion(FabricRecipeProvider.hasItem(Blocks.SPAWNER),
+                        FabricRecipeProvider.conditionsFromItem(Blocks.SPAWNER))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(Blocks.SPAWNER)));
     }
 }

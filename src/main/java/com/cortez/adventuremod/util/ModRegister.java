@@ -17,10 +17,12 @@ import com.cortez.adventuremod.potions.ModPotions;
 import com.cortez.adventuremod.recipe.ModRecipes;
 import com.cortez.adventuremod.screen.ModScreenHandlers;
 import com.cortez.adventuremod.world.gen.ModWorldGeneration;
+import com.cortez.adventuremod.world.village.VillageAdditions;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 
 /**
  * Classe responsável pelo registro de todas as funcionalidades do mod.
@@ -41,8 +43,8 @@ public class ModRegister
         registerBlocksEntity();
         registerScreen();
         registerRecipe();
+        registerVillageStructures();
     }
-
 
 
     /**
@@ -102,7 +104,7 @@ public class ModRegister
     private static void registerEvents() {
         ServerPlayerEvents.COPY_FROM.register(new ModPlayerEventCopyFrom());
         ServerTickEvents.START_SERVER_TICK.register(new PlayerTickHandler());
-        AxeWoodcutter.init();
+        PlayerBlockBreakEvents.AFTER.register(new AxeWoodcutter());
     }
 
     private static void registerEffects(){
@@ -120,5 +122,9 @@ public class ModRegister
     private static void registerRecipe()
     {
         ModRecipes.registerRecipes();
+    }
+
+    private static void registerVillageStructures() {
+        VillageAdditions.registerNewVillageStructures();
     }
 }

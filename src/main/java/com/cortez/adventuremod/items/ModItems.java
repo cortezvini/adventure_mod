@@ -119,6 +119,7 @@ public class ModItems
 
     public static final Item ROASTED_CORN = registerItem("roasted_corn", new Item(new FabricItemSettings().food(ModFoodComponents.ROASTED_CORN)));
 
+
     /**
      * Método para adicionar um item em um grupo de itens
      */
