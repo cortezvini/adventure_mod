@@ -11,5 +11,6 @@ public class ModRecipes {
                 CrusherRecipe.Serializer.INSTANCE);
         Registry.register(Registries.RECIPE_TYPE, new Identifier(AdventureMod.MODID, CrusherRecipe.Type.ID),
                 CrusherRecipe.Type.INSTANCE);
+
     }
 }

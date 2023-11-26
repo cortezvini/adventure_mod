@@ -15,13 +15,12 @@ import net.minecraft.world.World;
 import java.util.List;
 
 public class CrusherRecipe implements Recipe<SimpleInventory> {
-
     private final ItemStack output;
     private final List<Ingredient> recipeItems;
 
-    public CrusherRecipe(List<Ingredient> ingredients, ItemStack itemStack) {
-        this.output = itemStack;
-        this.recipeItems = ingredients;
+    public CrusherRecipe(List<Ingredient> recipeItems, ItemStack output) {
+        this.output = output;
+        this.recipeItems = recipeItems;
     }
 
     @Override
@@ -35,7 +34,7 @@ public class CrusherRecipe implements Recipe<SimpleInventory> {
 
     @Override
     public ItemStack craft(SimpleInventory inventory, DynamicRegistryManager registryManager) {
-        return output;
+        return output.copy();
     }
 
     @Override
@@ -49,13 +48,6 @@ public class CrusherRecipe implements Recipe<SimpleInventory> {
     }
 
     @Override
-    public DefaultedList<Ingredient> getIngredients() {
-        DefaultedList<Ingredient> list = DefaultedList.ofSize(this.recipeItems.size());
-        list.addAll(recipeItems);
-        return list;
-    }
-
-    @Override
     public RecipeSerializer<?> getSerializer() {
         return Serializer.INSTANCE;
     }
@@ -65,7 +57,15 @@ public class CrusherRecipe implements Recipe<SimpleInventory> {
         return Type.INSTANCE;
     }
 
+    @Override
+    public DefaultedList<Ingredient> getIngredients() {
+        DefaultedList list = DefaultedList.ofSize(this.recipeItems.size());
+        list.addAll(recipeItems);
+        return list;
+    }
+
     public static class Type implements RecipeType<CrusherRecipe> {
+        private Type() { }
         public static final Type INSTANCE = new Type();
         public static final String ID = "crusher_machine";
     }
@@ -73,6 +73,7 @@ public class CrusherRecipe implements Recipe<SimpleInventory> {
     public static class Serializer implements RecipeSerializer<CrusherRecipe> {
         public static final Serializer INSTANCE = new Serializer();
         public static final String ID = "crusher_machine";
+        // this is the name given in the json file
 
         public static final Codec<CrusherRecipe> CODEC = RecordCodecBuilder.create(in -> in.group(
                 validateAmount(Ingredient.DISALLOW_EMPTY_CODEC, 9).fieldOf("ingredients").forGetter(CrusherRecipe::getIngredients),
@@ -94,7 +95,7 @@ public class CrusherRecipe implements Recipe<SimpleInventory> {
         public CrusherRecipe read(PacketByteBuf buf) {
             DefaultedList<Ingredient> inputs = DefaultedList.ofSize(buf.readInt(), Ingredient.EMPTY);
 
-            for(int i = 0; i < inputs.size(); i++) {
+            for (int i = 0; i < inputs.size(); i++) {
                 inputs.set(i, Ingredient.fromPacket(buf));
             }
 
@@ -105,11 +106,9 @@ public class CrusherRecipe implements Recipe<SimpleInventory> {
         @Override
         public void write(PacketByteBuf buf, CrusherRecipe recipe) {
             buf.writeInt(recipe.getIngredients().size());
-
-            for (Ingredient ingredient : recipe.getIngredients()) {
-                ingredient.write(buf);
+            for (Ingredient ing : recipe.getIngredients()) {
+                ing.write(buf);
             }
-
             buf.writeItemStack(recipe.getResult(null));
         }
     }
