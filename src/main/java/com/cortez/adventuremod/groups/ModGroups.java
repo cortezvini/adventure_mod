@@ -77,7 +77,9 @@ public class ModGroups {
                         entries.add(ModBlocks.END_DIAMOND_ORE);
                         entries.add(ModBlocks.NETHER_EMERALD_ORE);
                         entries.add(ModBlocks.END_EMERALD_ORE);
+                        //MACHINES
                         entries.add(ModBlocks.CRUSHER_MACHINE);
+                        entries.add(ModBlocks.COFFEE_MACHINE);
 
                     }).build());
 

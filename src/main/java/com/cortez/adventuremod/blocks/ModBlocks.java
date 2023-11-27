@@ -2,6 +2,7 @@ package com.cortez.adventuremod.blocks;
 
 
 import com.cortez.adventuremod.AdventureMod;
+import com.cortez.adventuremod.blocks.custom.CoffeeMachineBlock;
 import com.cortez.adventuremod.blocks.custom.CornCropBlock;
 import com.cortez.adventuremod.blocks.custom.CrusherMachineBlock;
 import com.cortez.adventuremod.blocks.custom.RubberTreeLog;
@@ -78,6 +79,10 @@ public class ModBlocks
 
     public static final Block CORN_CROP = Registry.register(Registries.BLOCK, new Identifier(AdventureMod.MODID, "corn_crop"),
             new CornCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+
+
+    public static final Block COFFEE_MACHINE = registerBlock("coffee_machine", new CoffeeMachineBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+
     private static Block registerBlockWithoutItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, new Identifier(AdventureMod.MODID, name), block);
     }

@@ -1,6 +1,6 @@
-package com.cortez.adventuremod.compat;
+package com.cortez.adventuremod.compat.coffee_machine;
 
-import com.cortez.adventuremod.recipe.CrusherRecipe;
+import com.cortez.adventuremod.recipe.coffee_machine.CoffeeMachineRecipe;
 import me.shedaniel.rei.api.common.category.CategoryIdentifier;
 import me.shedaniel.rei.api.common.display.basic.BasicDisplay;
 import me.shedaniel.rei.api.common.entry.EntryIngredient;
@@ -12,27 +12,25 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class CrusherMachineDisplay extends BasicDisplay {
+public class CoffeeMachineDisplay extends BasicDisplay {
 
-
-    public CrusherMachineDisplay(List<EntryIngredient> inputs, List<EntryIngredient> outputs) {
+    public CoffeeMachineDisplay(List<EntryIngredient> inputs, List<EntryIngredient> outputs) {
         super(inputs, outputs);
     }
 
-    public CrusherMachineDisplay(RecipeEntry<CrusherRecipe> recipe) {
+    public CoffeeMachineDisplay(RecipeEntry<CoffeeMachineRecipe> recipe) {
         super(getInputList(recipe.value()), List.of(EntryIngredient.of(EntryStacks.of(recipe.value().getResult(null)))));
     }
 
-    private static List<EntryIngredient> getInputList(CrusherRecipe recipe) {
+    private static List<EntryIngredient> getInputList(CoffeeMachineRecipe recipe) {
         if(recipe == null) return Collections.emptyList();
         List<EntryIngredient> list = new ArrayList<>();
         list.add(EntryIngredients.ofIngredient(recipe.getIngredients().get(0)));
         return list;
     }
 
-
     @Override
     public CategoryIdentifier<?> getCategoryIdentifier() {
-        return CrusherMachineCategory.CRUSHER_MACHINE;
+        return CoffeeMachineCategory.COFFEE_MACHINE;
     }
 }

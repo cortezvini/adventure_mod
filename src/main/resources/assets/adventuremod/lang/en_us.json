@@ -76,11 +76,15 @@
   "block.adventuremod.nether_emerald_ore": "Nether Emerald Ore",
   "block.adventuremod.end_emerald_ore": "End Emerald Ore",
   "block.adventuremod.crusher_machine": "Crusher Machine",
+  "block.adventuremod.coffee_machine": "Coffee Machine",
 
   "adventuremod.command.homeset": "Set home at %d",
   "adventuremod.command.returnhome.success": "You returned to your home!",
   "adventuremod.command.returnhome.notdefined": "No Home Position has been Set!",
 
   "adventuremod.command.backpos.success":"You have returned to the place of last death!",
-  "adventuremod.command.backpos.notdefined": "You haven't died yet!"
+  "adventuremod.command.backpos.notdefined": "You haven't died yet!",
+
+  "adventuremod.tooltip.liquid.amount.with.capacity": "%s / %s mB",
+  "adventuremod.tooltip.liquid.amount": "%s mB"
 }

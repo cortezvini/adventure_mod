@@ -1,4 +1,4 @@
-package com.cortez.adventuremod.screen;
+package com.cortez.adventuremod.screen.CrusherMachine;
 
 import com.cortez.adventuremod.AdventureMod;
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -18,11 +18,12 @@ public class CrusherScreen extends HandledScreen<CrusherMachineScreenHandler>
         super(handler, inventory, title);
     }
 
+
     @Override
     protected void init() {
         super.init();
-        titleY = 1000;
-        playerInventoryTitleY = 1000;
+        titleY = 5;
+        playerInventoryTitleY = 70;
     }
 
     @Override

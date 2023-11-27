@@ -1,7 +1,7 @@
 package com.cortez.adventuremod.blocks.entity;
 
-import com.cortez.adventuremod.recipe.CrusherRecipe;
-import com.cortez.adventuremod.screen.CrusherMachineScreenHandler;
+import com.cortez.adventuremod.recipe.crushermachine.CrusherRecipe;
+import com.cortez.adventuremod.screen.CrusherMachine.CrusherMachineScreenHandler;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -73,7 +73,7 @@ public class CrusherMachineBlockEntity  extends BlockEntity implements ExtendedS
 
     @Override
     public Text getDisplayName() {
-        return Text.literal("Triturador");
+        return Text.translatable("block.adventuremod.crusher_machine");
     }
 
     @Override

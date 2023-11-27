@@ -1,0 +1,12 @@
+{
+  "type": "adventuremod:coffee_machine",
+  "ingredients": [
+    {
+      "item": "minecraft:coal"
+    }
+  ],
+  "output": {
+    "count": 8,
+    "item": "minecraft:diamond"
+  }
+}

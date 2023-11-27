@@ -1,4 +1,4 @@
-package com.cortez.adventuremod.recipe;
+package com.cortez.adventuremod.recipe.crushermachine;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.DataResult;

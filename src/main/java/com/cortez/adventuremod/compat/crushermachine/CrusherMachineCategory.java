@@ -1,4 +1,4 @@
-package com.cortez.adventuremod.compat;
+package com.cortez.adventuremod.compat.crushermachine;
 
 import com.cortez.adventuremod.AdventureMod;
 import com.cortez.adventuremod.blocks.ModBlocks;

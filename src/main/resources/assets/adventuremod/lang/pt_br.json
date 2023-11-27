@@ -75,6 +75,7 @@
   "block.adventuremod.nether_emerald_ore": "Minério de Esmeralda do Nether",
   "block.adventuremod.end_emerald_ore": "Minério de Esmeralda do Fim",
   "block.adventuremod.crusher_machine": "Triturador",
+  "block.adventuremod.coffee_machine": "Máquina de Café",
 
   "adventuremod.command.homeset": "Casa definida em %d",
   "adventuremod.command.returnhome.success": "Você retornou para sua casa!",
