@@ -23,6 +23,9 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+// CREDIT: https://github.com/mezz/JustEnoughItems by mezz (Forge Version)
+// HIGHLY EDITED VERSION FOR FABRIC by Kaupenjoe
+// Under MIT-License: https://github.com/mezz/JustEnoughItems/blob/1.18/LICENSE.txt
 public class FluidStackRenderer {
     private static final NumberFormat nf = NumberFormat.getIntegerInstance();
     public final long capacityMb;

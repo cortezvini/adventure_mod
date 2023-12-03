@@ -31,6 +31,12 @@
   "item.adventuremod.corn_seeds": "Milho",
   "item.adventuremod.corn_cob": "Espiga de Milho",
   "item.adventuremod.roasted_corn": "Milho Assado",
+  "item.adventuremod.coffee_fluid_bucket": "Balde de Café",
+  "item.adventuremod.coffee_powder": "Pó de Café",
+  "item.adventuremod.empty_cup": "Xícara",
+  "item.adventuremod.coffee_cup": "Xícara de Café",
+  "item.adventuremod.roasted_coffee": "Café Torrado",
+
   "itemgroup.adventuremod": "Adventure Mod",
 
   "effect.adventuremod.freeze": "Hipotermia",
@@ -76,6 +82,7 @@
   "block.adventuremod.end_emerald_ore": "Minério de Esmeralda do Fim",
   "block.adventuremod.crusher_machine": "Triturador",
   "block.adventuremod.coffee_machine": "Máquina de Café",
+  "block.adventuremod.coffee_fluid_still": "Café",
 
   "adventuremod.command.homeset": "Casa definida em %d",
   "adventuremod.command.returnhome.success": "Você retornou para sua casa!",

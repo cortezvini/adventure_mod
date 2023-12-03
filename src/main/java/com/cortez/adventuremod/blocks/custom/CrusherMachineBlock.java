@@ -1,6 +1,6 @@
 package com.cortez.adventuremod.blocks.custom;
 
-import com.cortez.adventuremod.blocks.entity.CrusherMachineBlockEntity;
+import com.cortez.adventuremod.blocks.entity.crushermachine.CrusherMachineBlockEntity;
 import com.cortez.adventuremod.blocks.entity.ModBlockEntities;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;

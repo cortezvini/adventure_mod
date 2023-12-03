@@ -1,0 +1,11 @@
+{
+  "type": "adventuremod:crusher_machine",
+  "ingredients": [
+    {
+      "item": "adventuremod:roasted_coffee"
+    }
+  ],
+  "output": {
+    "item": "adventuremod:coffee_powder"
+  }
+}

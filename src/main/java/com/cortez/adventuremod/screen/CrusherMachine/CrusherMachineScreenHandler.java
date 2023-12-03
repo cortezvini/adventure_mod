@@ -1,6 +1,6 @@
 package com.cortez.adventuremod.screen.CrusherMachine;
 
-import com.cortez.adventuremod.blocks.entity.CrusherMachineBlockEntity;
+import com.cortez.adventuremod.blocks.entity.crushermachine.CrusherMachineBlockEntity;
 import com.cortez.adventuremod.screen.ModScreenHandlers;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -11,9 +11,7 @@ import net.minecraft.network.PacketByteBuf;
 import net.minecraft.screen.ArrayPropertyDelegate;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
-import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.screen.slot.Slot;
-import org.jetbrains.annotations.Nullable;
 
 public class CrusherMachineScreenHandler extends ScreenHandler {
     private final Inventory inventory;
@@ -28,14 +26,15 @@ public class CrusherMachineScreenHandler extends ScreenHandler {
     public CrusherMachineScreenHandler(int syncId, PlayerInventory playerInventory,
                                      BlockEntity blockEntity, PropertyDelegate arrayPropertyDelegate) {
         super(ModScreenHandlers.CRUSHER_MACHINE_SCREEN_HANDLER, syncId);
-        checkSize(((Inventory) blockEntity), 2);
+        checkSize(((Inventory) blockEntity), 3);
         this.inventory = ((Inventory) blockEntity);
         inventory.onOpen(playerInventory.player);
         this.propertyDelegate = arrayPropertyDelegate;
         this.blockEntity = ((CrusherMachineBlockEntity) blockEntity);
 
-        this.addSlot(new Slot(inventory, 0, 80, 11));
-        this.addSlot(new Slot(inventory, 1, 80, 59));
+        this.addSlot(new Slot(inventory,0, 44,30));
+        this.addSlot(new Slot(inventory,1, 134,59));
+        this.addSlot(new Slot(inventory,2, 97,30));
 
 
         addPlayerInventory(playerInventory);
@@ -51,7 +50,7 @@ public class CrusherMachineScreenHandler extends ScreenHandler {
     public int getScaledProgress() {
         int progress = this.propertyDelegate.get(0);
         int maxProgress = this.propertyDelegate.get(1);  // Max Progress
-        int progressArrowSize = 26; // This is the width in pixels of your arrow
+        int progressArrowSize = 24; // This is the width in pixels of your arrow
 
         return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
     }

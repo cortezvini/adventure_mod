@@ -1,4 +1,4 @@
-package com.cortez.adventuremod.screen.coffee_machine.renderer;
+package com.cortez.adventuremod.screen.CrusherMachine.renderer;
 
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.util.math.Rect2i;
@@ -19,11 +19,11 @@ public class EnergyInfoArea {
     private final EnergyStorage energy;
 
     public EnergyInfoArea(int xMin, int yMin)  {
-        this(xMin, yMin, null,8,52);
+        this(xMin, yMin, null,8,64);
     }
 
     public EnergyInfoArea(int xMin, int yMin, EnergyStorage energy)  {
-        this(xMin, yMin, energy,8,52);
+        this(xMin, yMin, energy,8,64);
     }
 
     public EnergyInfoArea(int xMin, int yMin, EnergyStorage energy, int width, int height)  {

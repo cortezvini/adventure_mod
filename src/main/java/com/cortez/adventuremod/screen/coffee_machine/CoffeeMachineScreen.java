@@ -17,61 +17,84 @@ import net.minecraft.util.Identifier;
 
 import java.util.Optional;
 
-public class CoffeeMachineScreen extends HandledScreen<CoffeeMachineScreenHandler> {
+public class CoffeeMachineScreen extends HandledScreen<CoffeeMachineScreenHandler>
+{
     private static final Identifier TEXTURE = new Identifier(AdventureMod.MODID, "textures/gui/coffee_machine_gui.png");
 
     private EnergyInfoArea energyInfoArea;
-    private FluidStackRenderer fluidStackRenderer;
+    private FluidStackRenderer waterStackRenderer;
+    private FluidStackRenderer coffeeStorage;
 
-    public CoffeeMachineScreen(CoffeeMachineScreenHandler handler, PlayerInventory inventory, Text title) {
+
+    public CoffeeMachineScreen(CoffeeMachineScreenHandler handler, PlayerInventory inventory, Text title)
+    {
         super(handler, inventory, title);
     }
 
     @Override
     protected void init() {
         super.init();
-        titleY = 1000;
         playerInventoryTitleY = 1000;
         assignEnergyInfoArea();
-        assignFluidStackRenderer();
+        assignWaterStackRenderer();
+        assignCoffeeStackRenderer();
     }
 
-    private void assignFluidStackRenderer() {
-        fluidStackRenderer = new FluidStackRenderer((FluidConstants.BUCKET / 81) * 64, true, 16, 39);
-    }
 
     private void assignEnergyInfoArea() {
-        energyInfoArea = new EnergyInfoArea(((width - backgroundWidth) / 2) + 156,
-                ((height - backgroundHeight) / 2 ) + 11, handler.blockEntity.energyStorage);
+        energyInfoArea = new EnergyInfoArea(((width - backgroundWidth) / 2) + 160,
+                ((height - backgroundHeight) / 2 ) + 27, handler.blockEntity.energyStorage);
+    }
+
+    private void assignWaterStackRenderer() {
+        waterStackRenderer = new FluidStackRenderer((FluidConstants.BUCKET / 81) * 2, true, 16, 39);
+    }
+
+    private void assignCoffeeStackRenderer() {
+        coffeeStorage = new FluidStackRenderer((FluidConstants.BUCKET / 81) * 2, true, 16, 39);
     }
 
     private void renderEnergyAreaTooltips(DrawContext context, int pMouseX, int pMouseY, int x, int y) {
-        if(isMouseAboveArea(pMouseX, pMouseY, x, y, 156, 11, 8, 64)) {
+        if(isMouseAboveArea(pMouseX, pMouseY, x, y, 160, 27, 8, 64)) {
             context.drawTooltip(Screens.getTextRenderer(this), energyInfoArea.getTooltips(),
                     Optional.empty(), pMouseX - x, pMouseY - y);
         }
     }
 
-    private void renderFluidTooltip(DrawContext context, int mouseX, int mouseY, int x, int y, int offsetX, int offsetY, FluidStackRenderer renderer) {
+    private void renderWaterTooltip(DrawContext context, int mouseX, int mouseY, int x, int y, int offsetX, int offsetY, FluidStackRenderer renderer) {
         if(isMouseAboveArea(mouseX, mouseY, x, y, offsetX, offsetY, renderer)) {
-            context.drawTooltip(Screens.getTextRenderer(this), renderer.getTooltip(handler.blockEntity.fluidStorage, TooltipContext.Default.BASIC),
+            context.drawTooltip(Screens.getTextRenderer(this), renderer.getTooltip(handler.blockEntity.waterStorage, TooltipContext.Default.BASIC),
+                    Optional.empty(), mouseX - x, mouseY - y);
+        }
+    }
+
+    private void renderCoffeeTooltip(DrawContext context, int mouseX, int mouseY, int x, int y, int offsetX, int offsetY, FluidStackRenderer renderer) {
+        if(isMouseAboveArea(mouseX, mouseY, x, y, offsetX, offsetY, renderer)) {
+            context.drawTooltip(Screens.getTextRenderer(this), renderer.getTooltip(handler.blockEntity.coffeeStorage, TooltipContext.Default.BASIC),
                     Optional.empty(), mouseX - x, mouseY - y);
         }
     }
 
     @Override
     protected void drawForeground(DrawContext context, int mouseX, int mouseY) {
+        super.drawForeground(context, mouseX, mouseY);
+
         int x = (width - backgroundWidth) / 2;
         int y = (height - backgroundHeight) / 2;
 
+
         renderEnergyAreaTooltips(context, mouseX, mouseY, x, y);
-        renderFluidTooltip(context, mouseX, mouseY, x, y, 26, 11, fluidStackRenderer);
+        renderWaterTooltip(context, mouseX, mouseY, x, y, 31, 25, waterStackRenderer);
+        renderCoffeeTooltip(context, mouseX, mouseY, x, y,111, 26, coffeeStorage );
+        context.drawTexture(TEXTURE, 30, 24, 176, 17, 16, 50);
+        context.drawTexture(TEXTURE, 110, 25, 176, 17, 16, 50);
+        super.drawForeground(context, mouseX, mouseY);
     }
 
     @Override
     protected void drawBackground(DrawContext context, float delta, int mouseX, int mouseY) {
         RenderSystem.setShader(GameRenderer::getPositionTexProgram);
-        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+        RenderSystem.setShaderColor(1f, 1f, 1f, 1f);
         RenderSystem.setShaderTexture(0, TEXTURE);
         int x = (width - backgroundWidth) / 2;
         int y = (height - backgroundHeight) / 2;
@@ -79,15 +102,19 @@ public class CoffeeMachineScreen extends HandledScreen<CoffeeMachineScreenHandle
         context.drawTexture(TEXTURE, x, y, 0, 0, backgroundWidth, backgroundHeight);
 
         renderProgressArrow(context, x, y);
-
         energyInfoArea.draw(context);
-        fluidStackRenderer.drawFluid(context, handler.blockEntity.fluidStorage, x + 26, y + 11, 16, 39,
-                (FluidConstants.BUCKET / 81) * 64);
+        waterStackRenderer.drawFluid(context, handler.blockEntity.waterStorage, x + 31, y + 25, 14, 48,
+                (FluidConstants.BUCKET / 81) * 2);
+
+        coffeeStorage.drawFluid(context, handler.blockEntity.coffeeStorage, x + 111, y + 26, 14, 48,
+                (FluidConstants.BUCKET / 81) * 2);
+
+
     }
 
     private void renderProgressArrow(DrawContext context, int x, int y) {
         if(handler.isCrafting()) {
-            context.drawTexture(TEXTURE, x + 85, y + 30, 176, 0, 8, handler.getScaledProgress());
+            context.drawTexture(TEXTURE, x + 81, y + 40, 176, 0, handler.getScaledProgress(), 17);
         }
     }
 
@@ -101,6 +128,7 @@ public class CoffeeMachineScreen extends HandledScreen<CoffeeMachineScreenHandle
     private boolean isMouseAboveArea(int pMouseX, int pMouseY, int x, int y, int offsetX, int offsetY, FluidStackRenderer renderer) {
         return MouseUtil.isMouseOver(pMouseX, pMouseY, x + offsetX, y + offsetY, renderer.getWidth(), renderer.getHeight());
     }
+
 
     private boolean isMouseAboveArea(int pMouseX, int pMouseY, int x, int y, int offsetX, int offsetY, int width, int height) {
         return MouseUtil.isMouseOver(pMouseX, pMouseY, x + offsetX, y + offsetY, width, height);

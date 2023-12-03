@@ -1,7 +1,6 @@
 package com.cortez.adventuremod.recipe;
 
 import com.cortez.adventuremod.AdventureMod;
-import com.cortez.adventuremod.recipe.coffee_machine.CoffeeMachineRecipe;
 import com.cortez.adventuremod.recipe.crushermachine.CrusherRecipe;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -14,10 +13,6 @@ public class ModRecipes {
         Registry.register(Registries.RECIPE_TYPE, new Identifier(AdventureMod.MODID, CrusherRecipe.Type.ID),
                 CrusherRecipe.Type.INSTANCE);
 
-        Registry.register(Registries.RECIPE_SERIALIZER, new Identifier(AdventureMod.MODID, CoffeeMachineRecipe.Serializer.ID),
-                CoffeeMachineRecipe.Serializer.INSTANCE);
-        Registry.register(Registries.RECIPE_TYPE, new Identifier(AdventureMod.MODID, CoffeeMachineRecipe.Type.ID),
-                CoffeeMachineRecipe.Type.INSTANCE);
 
     }
 }

@@ -2,6 +2,7 @@ package com.cortez.adventuremod.groups;
 
 import com.cortez.adventuremod.AdventureMod;
 import com.cortez.adventuremod.blocks.ModBlocks;
+import com.cortez.adventuremod.fluids.ModFluids;
 import com.cortez.adventuremod.items.ModItems;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
@@ -52,6 +53,11 @@ public class ModGroups {
                         entries.add(ModItems.BRONZE_BOOTS);
                         entries.add(ModItems.CORN_SEEDS);
                         entries.add(ModItems.CORN_COB);
+                        entries.add(ModFluids.COFFEE_FLUID_BUCKET);
+                        entries.add(ModItems.COFFEE_POWDER);
+                        entries.add(ModItems.EMPTY_CUP);
+                        entries.add(ModItems.COFFEE_CUP);
+                        entries.add(ModItems.ROASTED_COFFEE);
                         //Blocks
                         entries.add(ModBlocks.RUBBER_TREE_LEAVES);
                         entries.add(ModBlocks.RUBBER_TREE_LOG);

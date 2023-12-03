@@ -1,8 +1,7 @@
 package com.cortez.adventuremod.blocks.custom;
 
-import com.cortez.adventuremod.blocks.entity.CoffeeMachineBlockEntity;
 import com.cortez.adventuremod.blocks.entity.ModBlockEntities;
-import it.unimi.dsi.fastutil.ints.Int2BooleanFunction;
+import com.cortez.adventuremod.blocks.entity.coffee_machine.CoffeeMachineBlockEntity;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
@@ -25,40 +24,43 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.stream.Stream;
 
-public class CoffeeMachineBlock extends BlockWithEntity implements BlockEntityProvider{
+public class CoffeeMachine extends BlockWithEntity implements BlockEntityProvider
+{
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
+
     private static final VoxelShape SHAPE_N = Stream.of(
             Block.createCuboidShape(1, 0, 0, 15, 1, 5),
             Block.createCuboidShape(1, 0, 5, 15, 16, 16),
             Block.createCuboidShape(1, 8, 0, 15, 16, 5)
     ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
 
-    private static final VoxelShape SHAPE_S = Stream.of(
+    private static final VoxelShape SHAPE_S =  Stream.of(
             Block.createCuboidShape(1, 0, 11, 15, 1, 16),
             Block.createCuboidShape(1, 0, 0, 15, 16, 11),
             Block.createCuboidShape(1, 8, 11, 15, 16, 16)
     ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
 
     private static final VoxelShape SHAPE_W = Stream.of(
-            Block.createCuboidShape(1, 0, 0, 15, 1, 5),
-            Block.createCuboidShape(1, 0, 5, 15, 16, 16),
-            Block.createCuboidShape(1, 8, 0, 15, 16, 5)
+            Block.createCuboidShape(0, 0, 1, 5, 1, 15),
+            Block.createCuboidShape(5, 0, 1, 16, 16, 15),
+            Block.createCuboidShape(0, 8, 1, 5, 16, 15)
     ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
 
     private static final VoxelShape SHAPE_E = Stream.of(
-            Block.createCuboidShape(1, 0, 0, 15, 1, 5),
-            Block.createCuboidShape(1, 0, 5, 15, 16, 16),
-            Block.createCuboidShape(1, 8, 0, 15, 16, 5)
+            Block.createCuboidShape(11, 0, 1, 16, 1, 15),
+            Block.createCuboidShape(0, 0, 1, 11, 16, 15),
+            Block.createCuboidShape(11, 8, 1, 16, 16, 15)
     ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
 
-    public CoffeeMachineBlock(Settings settings) {
+    public CoffeeMachine(Settings settings) {
         super(settings);
     }
+
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         switch (state.get(FACING)) {
-            case NORTH:
+            case NORTH :
                 return SHAPE_N;
             case SOUTH:
                 return SHAPE_S;
@@ -68,7 +70,9 @@ public class CoffeeMachineBlock extends BlockWithEntity implements BlockEntityPr
                 return SHAPE_E;
             default:
                 return SHAPE_N;
+
         }
+
     }
 
     @Nullable
@@ -92,6 +96,13 @@ public class CoffeeMachineBlock extends BlockWithEntity implements BlockEntityPr
         builder.add(FACING);
     }
 
+    //Block Entity
+
+    @Override
+    public BlockRenderType getRenderType(BlockState state) {
+        return BlockRenderType.MODEL;
+    }
+
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
@@ -99,13 +110,8 @@ public class CoffeeMachineBlock extends BlockWithEntity implements BlockEntityPr
     }
 
     @Override
-    public BlockRenderType getRenderType(BlockState state) {
-        return BlockRenderType.MODEL;
-    }
-
-    @Override
     public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
-        if(state.getBlock() != newState.getBlock()){
+        if (state.getBlock() != newState.getBlock()) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
             if (blockEntity instanceof CoffeeMachineBlockEntity) {
                 ItemScatterer.spawn(world, pos, (CoffeeMachineBlockEntity)blockEntity);
@@ -117,20 +123,20 @@ public class CoffeeMachineBlock extends BlockWithEntity implements BlockEntityPr
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (!world.isClient){
+        if (!world.isClient()){
             NamedScreenHandlerFactory screenHandlerFactory = ((CoffeeMachineBlockEntity) world.getBlockEntity(pos));
 
-            if (screenHandlerFactory != null) {
+            if (screenHandlerFactory != null)
+            {
                 player.openHandledScreen(screenHandlerFactory);
             }
         }
-
         return ActionResult.SUCCESS;
     }
 
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return validateTicker(type, ModBlockEntities.COFFEE_MACHINE_BE, ((world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1)));
+        return validateTicker(type, ModBlockEntities.COFFEE_MACHINE_BE, (world1, pos, state1, blockEntity)-> blockEntity.tick(world1, pos, state1));
     }
 }

@@ -22,6 +22,7 @@ public class AdventureModDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(ModLootTableGenerator::new);
         pack.addProvider(ModRecipeGenerator::new);
         pack.addProvider(ModBlockTagProvider::new);
+        pack.addProvider(ModTagFluidProvider::new);
     }
 
     @Override

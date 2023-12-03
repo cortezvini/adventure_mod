@@ -31,6 +31,11 @@
   "item.adventuremod.corn_seeds": "Corn",
   "item.adventuremod.corn_cob": "Corn Cob",
   "item.adventuremod.roasted_corn": "Roasted Corn",
+  "item.adventuremod.coffee_fluid_bucket": "Coffee Bucket",
+  "item.adventuremod.coffee_powder": "Coffee Powder",
+  "item.adventuremod.empty_cup": "Cup",
+  "item.adventuremod.coffee_cup": "Coffee Cup",
+  "item.adventuremod.roasted_coffee": "Roasted Coffee",
 
   "itemgroup.adventuremod": "Adventure Mod",
 
@@ -77,6 +82,7 @@
   "block.adventuremod.end_emerald_ore": "End Emerald Ore",
   "block.adventuremod.crusher_machine": "Crusher Machine",
   "block.adventuremod.coffee_machine": "Coffee Machine",
+  "block.adventuremod.coffee_fluid_still": "Coffee",
 
   "adventuremod.command.homeset": "Set home at %d",
   "adventuremod.command.returnhome.success": "You returned to your home!",
@@ -87,4 +93,6 @@
 
   "adventuremod.tooltip.liquid.amount.with.capacity": "%s / %s mB",
   "adventuremod.tooltip.liquid.amount": "%s mB"
+
+
 }

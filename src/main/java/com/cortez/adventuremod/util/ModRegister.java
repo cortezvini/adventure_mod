@@ -11,6 +11,7 @@ import com.cortez.adventuremod.effect.ModEffects;
 import com.cortez.adventuremod.event.AxeWoodcutter;
 import com.cortez.adventuremod.event.ModPlayerEventCopyFrom;
 import com.cortez.adventuremod.event.PlayerTickHandler;
+import com.cortez.adventuremod.fluids.ModFluids;
 import com.cortez.adventuremod.groups.ModGroups;
 import com.cortez.adventuremod.items.ModItems;
 import com.cortez.adventuremod.potions.ModPotions;
@@ -44,6 +45,7 @@ public class ModRegister
         registerScreen();
         registerRecipe();
         registerVillageStructures();
+        registerFluids();
     }
 
 
@@ -126,5 +128,9 @@ public class ModRegister
 
     private static void registerVillageStructures() {
         VillageAdditions.registerNewVillageStructures();
+    }
+
+    private static void registerFluids(){
+        ModFluids.register();
     }
 }

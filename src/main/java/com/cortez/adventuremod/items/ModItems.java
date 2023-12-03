@@ -2,11 +2,9 @@ package com.cortez.adventuremod.items;
 
 import com.cortez.adventuremod.AdventureMod;
 import com.cortez.adventuremod.blocks.ModBlocks;
-import com.cortez.adventuremod.groups.ModGroups;
 import com.cortez.adventuremod.items.custom.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -119,6 +117,13 @@ public class ModItems
 
     public static final Item ROASTED_CORN = registerItem("roasted_corn", new Item(new FabricItemSettings().food(ModFoodComponents.ROASTED_CORN)));
 
+    public static final Item COFFEE_POWDER = registerItem("coffee_powder", new Item(new FabricItemSettings()));
+
+    public static final Item EMPTY_CUP = registerItem("empty_cup", new Item(new FabricItemSettings()));
+
+    public static final Item COFFEE_CUP = registerItem("coffee_cup", new CoffeeItem(new FabricItemSettings().maxCount(1)));
+
+    public static final Item ROASTED_COFFEE = registerItem("roasted_coffee", new Item(new FabricItemSettings()));
 
     /**
      * Método para adicionar um item em um grupo de itens

@@ -1,6 +1,6 @@
-package com.cortez.adventuremod.blocks.entity.renderer;
+package com.cortez.adventuremod.blocks.entity.crushermachine.renderer;
 
-import com.cortez.adventuremod.blocks.entity.CrusherMachineBlockEntity;
+import com.cortez.adventuremod.blocks.entity.crushermachine.CrusherMachineBlockEntity;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.LightmapTextureManager;
 import net.minecraft.client.render.OverlayTexture;

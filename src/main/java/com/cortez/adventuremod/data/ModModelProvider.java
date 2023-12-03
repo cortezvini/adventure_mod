@@ -2,6 +2,7 @@ package com.cortez.adventuremod.data;
 
 import com.cortez.adventuremod.blocks.ModBlocks;
 import com.cortez.adventuremod.blocks.custom.CornCropBlock;
+import com.cortez.adventuremod.fluids.ModFluids;
 import com.cortez.adventuremod.items.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -85,6 +86,11 @@ public class ModModelProvider extends FabricModelProvider
         itemModelGenerator.register(ModItems.CORN_SEEDS, Models.GENERATED);
         itemModelGenerator.register(ModItems.CORN_COB, Models.GENERATED);
         itemModelGenerator.register(ModItems.ROASTED_CORN, Models.GENERATED);
+        itemModelGenerator.register(ModFluids.COFFEE_FLUID_BUCKET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COFFEE_POWDER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.EMPTY_CUP, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COFFEE_CUP, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ROASTED_COFFEE, Models.GENERATED);
 
         itemModelGenerator.registerArmor((ArmorItem)ModItems.DIVINGSUIT_HELMET);
         itemModelGenerator.registerArmor((ArmorItem)ModItems.DIVINGSUIT_CHESTPLATE);

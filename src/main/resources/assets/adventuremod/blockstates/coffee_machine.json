@@ -1,7 +1,8 @@
 {
   "variants": {
-    "": {
-      "model": "adventuremod:block/coffee_machine"
-    }
+    "facing=north": { "model": "adventuremod:block/coffee_machine" },
+    "facing=east": { "model": "adventuremod:block/coffee_machine", "y": 90 },
+    "facing=south": { "model": "adventuremod:block/coffee_machine", "y": 180 },
+    "facing=west": { "model": "adventuremod:block/coffee_machine", "y": 270 }
   }
 }
