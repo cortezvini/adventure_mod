@@ -44,6 +44,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider
         offerBlasting(exporter, List.of(ModItems.COPPER_DUST), RecipeCategory.MISC, Items.COPPER_INGOT, 0.5F, 100, "adventuremod");
 
         offerSmelting(exporter, List.of(ModItems.CORN_COB), RecipeCategory.FOOD, ModItems.ROASTED_CORN, 0.0F, 200, "adventuremod");
+        offerSmelting(exporter, List.of(ModItems.DRIED_FRUIT_COFFEE), RecipeCategory.MISC, ModItems.ROASTED_COFFEE, 0.0F, 200, "adventuremod");
 
         //CraftTable
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TIN_INGOT)
@@ -295,5 +296,10 @@ public class ModRecipeGenerator extends FabricRecipeProvider
                 .criterion(FabricRecipeProvider.hasItem(Blocks.SPAWNER),
                         FabricRecipeProvider.conditionsFromItem(Blocks.SPAWNER))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(Blocks.SPAWNER)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.COFFEE_SEED, 14)
+                .input(ModItems.FRUIT_COFFEE)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.FRUIT_COFFEE), FabricRecipeProvider.conditionsFromItem(ModItems.FRUIT_COFFEE))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.COFFEE_SEED)));
     }
 }

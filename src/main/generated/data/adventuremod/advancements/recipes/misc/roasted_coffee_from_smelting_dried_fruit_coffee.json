@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dried_fruit_coffee": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "adventuremod:dried_fruit_coffee"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:roasted_coffee_from_smelting_dried_fruit_coffee"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_dried_fruit_coffee"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:roasted_coffee_from_smelting_dried_fruit_coffee"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "adventuremod:dried_fruit_coffee"
+  },
+  "result": "adventuremod:roasted_coffee",
+  "experience": 0,
+  "cookingtime": 100
+}

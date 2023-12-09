@@ -58,6 +58,10 @@ public class ModGroups {
                         entries.add(ModItems.EMPTY_CUP);
                         entries.add(ModItems.COFFEE_CUP);
                         entries.add(ModItems.ROASTED_COFFEE);
+                        entries.add(ModItems.FRUIT_COFFEE);
+                        entries.add(ModItems.DRIED_FRUIT_COFFEE);
+                        entries.add(ModItems.SEMIDRIED_FRUIT_COFFEE);
+                        entries.add(ModItems.COFFEE_SEED);
                         //Blocks
                         entries.add(ModBlocks.RUBBER_TREE_LEAVES);
                         entries.add(ModBlocks.RUBBER_TREE_LOG);

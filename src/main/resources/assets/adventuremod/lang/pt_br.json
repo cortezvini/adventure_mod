@@ -36,6 +36,10 @@
   "item.adventuremod.empty_cup": "Xícara",
   "item.adventuremod.coffee_cup": "Xícara de Café",
   "item.adventuremod.roasted_coffee": "Café Torrado",
+  "item.adventuremod.coffee_fruit": "Café Fruto",
+  "item.adventuremod.dried_fruit_coffee": " Café Fruto Seco",
+  "item.adventuremod.semidried_fruit_coffee": "Café Fruto Semi-seco",
+  "item.adventuremod.coffee_seed": "Semente de Café",
 
   "itemgroup.adventuremod": "Adventure Mod",
 
@@ -89,5 +93,7 @@
   "adventuremod.command.returnhome.notdefined": "Você não tem uma casa definida!",
 
   "adventuremod.command.backpos.success":"Você retornou para lugar da ultima morte!",
-  "adventuremod.command.backpos.notdefined": "Você não morreu ainda!"
+  "adventuremod.command.backpos.notdefined": "Você não morreu ainda!",
+  "adventuremod.tooltip.liquid.amount.with.capacity": "%s / %s mB",
+  "adventuremod.tooltip.liquid.amount": "%s mB"
 }

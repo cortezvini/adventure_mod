@@ -42,5 +42,9 @@ public class AdventureModClient implements ClientModInitializer
                 SimpleFluidRenderHandler.coloredWater(0x2B1703));
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(),
                 ModFluids.COFFEE_FLUID, ModFluids.FLOWING_COFFEE_FLUID);
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.COFFEE_FRUIT_BLOCK, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.COFFEE_CROP, RenderLayer.getCutout());
+
     }
 }

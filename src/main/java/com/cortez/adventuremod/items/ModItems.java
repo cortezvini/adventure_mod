@@ -125,6 +125,15 @@ public class ModItems
 
     public static final Item ROASTED_COFFEE = registerItem("roasted_coffee", new Item(new FabricItemSettings()));
 
+    public static final Item FRUIT_COFFEE = registerItem("coffee_fruit", new CoffeeFruitItem(new FabricItemSettings(), 0));
+
+    public static final Item SEMIDRIED_FRUIT_COFFEE = registerItem("semidried_fruit_coffee", new CoffeeFruitItem(new FabricItemSettings(), 1));
+
+    public static final Item DRIED_FRUIT_COFFEE = registerItem("dried_fruit_coffee", new Item(new FabricItemSettings()));
+
+
+    public static final Item COFFEE_SEED = registerItem("coffee_seed", new AliasedBlockItem(ModBlocks.COFFEE_CROP, new FabricItemSettings()));
+
     /**
      * Método para adicionar um item em um grupo de itens
      */

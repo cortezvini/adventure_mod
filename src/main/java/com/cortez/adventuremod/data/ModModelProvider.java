@@ -4,8 +4,10 @@ import com.cortez.adventuremod.blocks.ModBlocks;
 import com.cortez.adventuremod.blocks.custom.CornCropBlock;
 import com.cortez.adventuremod.fluids.ModFluids;
 import com.cortez.adventuremod.items.ModItems;
+import com.cortez.adventuremod.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
@@ -91,6 +93,11 @@ public class ModModelProvider extends FabricModelProvider
         itemModelGenerator.register(ModItems.EMPTY_CUP, Models.GENERATED);
         itemModelGenerator.register(ModItems.COFFEE_CUP, Models.GENERATED);
         itemModelGenerator.register(ModItems.ROASTED_COFFEE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FRUIT_COFFEE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SEMIDRIED_FRUIT_COFFEE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DRIED_FRUIT_COFFEE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COFFEE_SEED, Models.GENERATED);
+
 
         itemModelGenerator.registerArmor((ArmorItem)ModItems.DIVINGSUIT_HELMET);
         itemModelGenerator.registerArmor((ArmorItem)ModItems.DIVINGSUIT_CHESTPLATE);

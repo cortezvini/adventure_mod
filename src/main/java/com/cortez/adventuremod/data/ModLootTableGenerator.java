@@ -2,6 +2,7 @@ package com.cortez.adventuremod.data;
 
 import com.cortez.adventuremod.blocks.ModBlocks;
 import com.cortez.adventuremod.blocks.custom.CornCropBlock;
+import com.cortez.adventuremod.blocks.custom.FruitCoffeeBlock;
 import com.cortez.adventuremod.items.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
@@ -64,6 +65,12 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider
 
 
         addDrop(ModBlocks.CORN_CROP, cropDrops(ModBlocks.CORN_CROP, ModItems.CORN_COB, ModItems.CORN_SEEDS, builder));
+
+        /*BlockStatePropertyLootCondition.Builder builderCoffeeFruitBlock = BlockStatePropertyLootCondition.builder(ModBlocks.COFFEE_FRUIT_BLOCK)
+                .properties(StatePredicate.Builder.create().exactMatch(FruitCoffeeBlock.DRIED, true));*/
+
+
+        //addDrop(ModBlocks.COFFEE_FRUIT_BLOCK, cropDrops(ModBlocks.COFFEE_FRUIT_BLOCK, ModItems.DRIED_FRUIT_COFFEE, ModItems.FRUIT_COFFEE, builderCoffeeFruitBlock));
     }
 
 }

@@ -1,0 +1,61 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "adventuremod:coffee_fruit",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "adventuremod:coffee_fruit_block",
+              "properties": {
+                "age": "0"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "adventuremod:semidried_fruit_coffee",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "adventuremod:coffee_fruit_block",
+              "properties": {
+                "age": "1"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "adventuremod:dried_fruit_coffee",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "adventuremod:coffee_fruit_block",
+              "properties": {
+                "age": "2"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 7
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    }
+  ]
+}

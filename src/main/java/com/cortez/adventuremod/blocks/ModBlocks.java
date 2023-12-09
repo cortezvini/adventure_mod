@@ -2,10 +2,7 @@ package com.cortez.adventuremod.blocks;
 
 
 import com.cortez.adventuremod.AdventureMod;
-import com.cortez.adventuremod.blocks.custom.CoffeeMachine;
-import com.cortez.adventuremod.blocks.custom.CornCropBlock;
-import com.cortez.adventuremod.blocks.custom.CrusherMachineBlock;
-import com.cortez.adventuremod.blocks.custom.RubberTreeLog;
+import com.cortez.adventuremod.blocks.custom.*;
 import com.cortez.adventuremod.world.tree.RubberSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -82,6 +79,11 @@ public class ModBlocks
 
 
     public static final Block COFFEE_MACHINE = registerBlock("coffee_machine", new CoffeeMachine(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+
+    public static final Block COFFEE_FRUIT_BLOCK = registerBlock("coffee_fruit_block", new FruitCoffeeBlock(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK)));
+
+    public static final Block COFFEE_CROP = Registry.register(Registries.BLOCK, new Identifier(AdventureMod.MODID, "coffee_crop"),
+            new CoffeeCrop(FabricBlockSettings.copyOf(Blocks.WHEAT)));
 
     private static Block registerBlockWithoutItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, new Identifier(AdventureMod.MODID, name), block);

@@ -36,6 +36,10 @@
   "item.adventuremod.empty_cup": "Cup",
   "item.adventuremod.coffee_cup": "Coffee Cup",
   "item.adventuremod.roasted_coffee": "Roasted Coffee",
+  "item.adventuremod.coffee_fruit": "Fruit Coffee",
+  "item.adventuremod.semidried_fruit_coffee": "Semi Dried Fruit Coffee",
+  "item.adventuremod.dried_fruit_coffee": " Dried Fruit Coffee",
+  "item.adventuremod.coffee_seed": "Coffee Seed",
 
   "itemgroup.adventuremod": "Adventure Mod",
 
