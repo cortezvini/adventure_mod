@@ -5,6 +5,7 @@ import com.cortez.adventuremod.blocks.custom.CornCropBlock;
 import com.cortez.adventuremod.fluids.ModFluids;
 import com.cortez.adventuremod.items.ModItems;
 import com.cortez.adventuremod.util.ModTags;
+import dev.architectury.platform.Mod;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Blocks;
@@ -97,6 +98,8 @@ public class ModModelProvider extends FabricModelProvider
         itemModelGenerator.register(ModItems.SEMIDRIED_FRUIT_COFFEE, Models.GENERATED);
         itemModelGenerator.register(ModItems.DRIED_FRUIT_COFFEE, Models.GENERATED);
         itemModelGenerator.register(ModItems.COFFEE_SEED, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CLAY_CUP_MODEL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BRICK_CUP_MODEL, Models.GENERATED);
 
 
         itemModelGenerator.registerArmor((ArmorItem)ModItems.DIVINGSUIT_HELMET);

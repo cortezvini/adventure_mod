@@ -46,6 +46,9 @@ public class ModRecipeGenerator extends FabricRecipeProvider
         offerSmelting(exporter, List.of(ModItems.CORN_COB), RecipeCategory.FOOD, ModItems.ROASTED_CORN, 0.0F, 200, "adventuremod");
         offerSmelting(exporter, List.of(ModItems.DRIED_FRUIT_COFFEE), RecipeCategory.MISC, ModItems.ROASTED_COFFEE, 0.0F, 200, "adventuremod");
 
+        offerSmelting(exporter, List.of(ModItems.CLAY_CUP_MODEL), RecipeCategory.MISC, ModItems.BRICK_CUP_MODEL, 0.5F, 200, "adventuremod");
+        offerBlasting(exporter, List.of(ModItems.CLAY_CUP_MODEL), RecipeCategory.MISC, ModItems.BRICK_CUP_MODEL, 0.5F, 100, "adventuremod");
+
         //CraftTable
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TIN_INGOT)
                 .pattern("###")
@@ -296,6 +299,28 @@ public class ModRecipeGenerator extends FabricRecipeProvider
                 .criterion(FabricRecipeProvider.hasItem(Blocks.SPAWNER),
                         FabricRecipeProvider.conditionsFromItem(Blocks.SPAWNER))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(Blocks.SPAWNER)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CLAY_CUP_MODEL, 4)
+                .pattern("# #")
+                .pattern(" # ")
+                .input('#', Items.CLAY_BALL)
+                .criterion(FabricRecipeProvider.hasItem(Items.CLAY_BALL),
+                        FabricRecipeProvider.conditionsFromItem(Items.CLAY_BALL))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.CLAY_CUP_MODEL),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.CLAY_CUP_MODEL))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.CLAY_CUP_MODEL)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.EMPTY_CUP)
+                .pattern(" W ")
+                .pattern("W#W")
+                .pattern(" W ")
+                .input('W', Items.WHITE_DYE)
+                .input('#', ModItems.BRICK_CUP_MODEL)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRICK_CUP_MODEL),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.BRICK_CUP_MODEL))
+                .criterion(FabricRecipeProvider.hasItem(Items.WHITE_DYE),
+                        FabricRecipeProvider.conditionsFromItem(Items.WHITE_DYE))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.EMPTY_CUP)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.COFFEE_SEED, 14)
                 .input(ModItems.FRUIT_COFFEE)

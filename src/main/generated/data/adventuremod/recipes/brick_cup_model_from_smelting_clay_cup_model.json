@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.5,
+  "group": "adventuremod",
+  "ingredient": {
+    "item": "adventuremod:clay_cup_model"
+  },
+  "result": "adventuremod:brick_cup_model"
+}

@@ -48,11 +48,15 @@ public class CoffeeCrop extends CropBlock {
 
         if(heldItemStack.isEmpty() || heldItemStack.getItem() != Items.BONE_MEAL)
         {
-            world.setBlockState(pos, this.withAge(6), 2);
+            int age = this.getAge(state);
+            if (age == 8){
+                world.setBlockState(pos, this.withAge(6), 2);
 
-            ItemStack coffee_fruit = new ItemStack(ModItems.FRUIT_COFFEE, 8);
-            ItemEntity itemEntity = new ItemEntity(world, pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5, coffee_fruit);
-            world.spawnEntity(itemEntity);
+                ItemStack coffee_fruit = new ItemStack(ModItems.FRUIT_COFFEE, 8);
+                ItemEntity itemEntity = new ItemEntity(world, pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5, coffee_fruit);
+                world.spawnEntity(itemEntity);
+            }
+
 
         }
 

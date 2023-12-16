@@ -11,13 +11,25 @@ public class VillageAdditions
         FabricStructurePoolRegistry.registerSimple(
                 new Identifier("minecraft:village/plains/houses"),
                 new Identifier(AdventureMod.MODID, "small_corn_farm_plains"),
-                4
+                2
         );
 
         FabricStructurePoolRegistry.registerSimple(
                 new Identifier("minecraft:village/plains/houses"),
                 new Identifier(AdventureMod.MODID, "large_corn_farm_plains"),
-                4
+                2
+        );
+
+        FabricStructurePoolRegistry.registerSimple(
+                new Identifier("minecraft:village/plains/houses"),
+                new Identifier(AdventureMod.MODID, "plains_coffee_small_farm"),
+                2
+        );
+
+        FabricStructurePoolRegistry.registerSimple(
+                new Identifier("minecraft:village/plains/houses"),
+                new Identifier(AdventureMod.MODID, "plains_coffee_large_farm"),
+                2
         );
 
         FabricStructurePoolRegistry.registerSimple(

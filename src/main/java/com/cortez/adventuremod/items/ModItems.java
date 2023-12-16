@@ -134,6 +134,9 @@ public class ModItems
 
     public static final Item COFFEE_SEED = registerItem("coffee_seed", new AliasedBlockItem(ModBlocks.COFFEE_CROP, new FabricItemSettings()));
 
+    public static final Item CLAY_CUP_MODEL = registerItem("clay_cup_model", new Item(new FabricItemSettings()));
+    public static final Item BRICK_CUP_MODEL = registerItem("brick_cup_model", new Item(new FabricItemSettings()));
+
     /**
      * Método para adicionar um item em um grupo de itens
      */

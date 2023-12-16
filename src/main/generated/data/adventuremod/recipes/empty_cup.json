@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "adventuremod:brick_cup_model"
+    },
+    "W": {
+      "item": "minecraft:white_dye"
+    }
+  },
+  "pattern": [
+    " W ",
+    "W#W",
+    " W "
+  ],
+  "result": {
+    "item": "adventuremod:empty_cup"
+  },
+  "show_notification": true
+}
